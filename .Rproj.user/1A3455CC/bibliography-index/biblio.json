@@ -1,0 +1,1877 @@
+{
+    "sources": [
+        {
+            "URL": "http://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "xie2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1498716963",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic Documents with R and knitr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=alr3",
+            "author": [
+                {
+                    "family": "Weisberg",
+                    "given": "Sanford"
+                }
+            ],
+            "id": "R-alr3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "R package version 2.0.8",
+            "title": "alr3: Data to Accompany Applied Linear Regression 3rd Edition",
+            "title-short": "alr3",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.R-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "R-base",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A Language and Environment for Statistical Computing",
+            "title-short": "R",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=broom",
+            "author": [
+                {
+                    "family": "Robinson",
+                    "given": "David"
+                },
+                {
+                    "family": "Hayes",
+                    "given": "Alex"
+                }
+            ],
+            "id": "R-broom",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.5.6",
+            "title": "broom: Convert Statistical Analysis Objects into Tidy Tibbles",
+            "title-short": "broom",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=car",
+            "author": [
+                {
+                    "family": "Fox",
+                    "given": "John"
+                },
+                {
+                    "family": "Weisberg",
+                    "given": "Sanford"
+                },
+                {
+                    "family": "Price",
+                    "given": "Brad"
+                }
+            ],
+            "id": "R-car",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 3.0-7",
+            "title": "car: Companion to Applied Regression",
+            "title-short": "car",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=carData",
+            "author": [
+                {
+                    "family": "Fox",
+                    "given": "John"
+                },
+                {
+                    "family": "Weisberg",
+                    "given": "Sanford"
+                },
+                {
+                    "family": "Price",
+                    "given": "Brad"
+                }
+            ],
+            "id": "R-carData",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "R package version 3.0-3",
+            "title": "carData: Companion to Applied Regression Data Sets",
+            "title-short": "carData",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=dials",
+            "author": [
+                {
+                    "family": "Kuhn",
+                    "given": "Max"
+                }
+            ],
+            "id": "R-dials",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.0.6",
+            "title": "dials: Tools for Creating Tuning Parameter Values",
+            "title-short": "dials",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=dplyr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "François",
+                    "given": "Romain"
+                },
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Müller",
+                    "given": "Kirill"
+                }
+            ],
+            "id": "R-dplyr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.8.5",
+            "title": "dplyr: A Grammar of Data Manipulation",
+            "title-short": "dplyr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=emmeans",
+            "author": [
+                {
+                    "family": "Lenth",
+                    "given": "Russell"
+                }
+            ],
+            "id": "R-emmeans",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 1.4.6",
+            "title": "emmeans: Estimated Marginal Means, aka Least-Squares Means",
+            "title-short": "emmeans",
+            "type": "book"
+        },
+        {
+            "URL": "https://github.com/datalorax/equatiomatic",
+            "author": [
+                {
+                    "family": "Anderson",
+                    "given": "Daniel"
+                },
+                {
+                    "family": "Heiss",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Rosenberg",
+                    "given": "Joshua"
+                }
+            ],
+            "id": "R-equatiomatic",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.0.0.9000",
+            "title": "equatiomatic: Transform Models into LaTeX Equations",
+            "title-short": "equatiomatic",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=forcats",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-forcats",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.5.0",
+            "title": "forcats: Tools for Working with Categorical Variables (Factors)",
+            "title-short": "forcats",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=ggformula",
+            "author": [
+                {
+                    "family": "Kaplan",
+                    "given": "Daniel"
+                },
+                {
+                    "family": "Pruim",
+                    "given": "Randall"
+                }
+            ],
+            "id": "R-ggformula",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.9.4",
+            "title": "ggformula: Formula Interface to the Grammar of Graphics",
+            "title-short": "ggformula",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=ggfortify",
+            "author": [
+                {
+                    "family": "Horikoshi",
+                    "given": "Masaaki"
+                },
+                {
+                    "family": "Tang",
+                    "given": "Yuan"
+                }
+            ],
+            "id": "R-ggfortify",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.4.9",
+            "title": "ggfortify: Data Visualization Tools for Statistical Analysis Results",
+            "title-short": "ggfortify",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=ggplot2",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Pedersen",
+                    "given": "Thomas Lin"
+                },
+                {
+                    "family": "Takahashi",
+                    "given": "Kohske"
+                },
+                {
+                    "family": "Wilke",
+                    "given": "Claus"
+                },
+                {
+                    "family": "Woo",
+                    "given": "Kara"
+                },
+                {
+                    "family": "Yutani",
+                    "given": "Hiroaki"
+                },
+                {
+                    "family": "Dunnington",
+                    "given": "Dewey"
+                }
+            ],
+            "id": "R-ggplot2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 3.3.0",
+            "title": "ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics",
+            "title-short": "ggplot2",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=ggstance",
+            "author": [
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                }
+            ],
+            "id": "R-ggstance",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.3.4",
+            "title": "ggstance: Horizontal ’ggplot2’ Components",
+            "title-short": "ggstance",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=infer",
+            "author": [
+                {
+                    "family": "Bray",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Ismay",
+                    "given": "Chester"
+                },
+                {
+                    "family": "Chasnovski",
+                    "given": "Evgeni"
+                },
+                {
+                    "family": "Baumer",
+                    "given": "Ben"
+                },
+                {
+                    "family": "Cetinkaya-Rundel",
+                    "given": "Mine"
+                }
+            ],
+            "id": "R-infer",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "R package version 0.5.1",
+            "title": "infer: Tidy Statistical Inference",
+            "title-short": "infer",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=kableExtra",
+            "author": [
+                {
+                    "family": "Zhu",
+                    "given": "Hao"
+                }
+            ],
+            "id": "R-kableExtra",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "R package version 1.1.0",
+            "title": "kableExtra: Construct Complex Table with ’kable’ and Pipe Syntax",
+            "title-short": "kableExtra",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=latex2exp",
+            "author": [
+                {
+                    "family": "Meschiari",
+                    "given": "Stefano"
+                }
+            ],
+            "id": "R-latex2exp",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "R package version 0.4.0",
+            "title": "latex2exp: Use LaTeX Expressions in Plots",
+            "title-short": "latex2exp",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=lattice",
+            "author": [
+                {
+                    "family": "Sarkar",
+                    "given": "Deepayan"
+                }
+            ],
+            "id": "R-lattice",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "R package version 0.20-38",
+            "title": "lattice: Trellis Graphics for R",
+            "title-short": "lattice",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=lmtest",
+            "author": [
+                {
+                    "family": "Hothorn",
+                    "given": "Torsten"
+                },
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Farebrother",
+                    "given": "Richard W."
+                },
+                {
+                    "family": "Cummins",
+                    "given": "Clint"
+                }
+            ],
+            "id": "R-lmtest",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "R package version 0.9-37",
+            "title": "lmtest: Testing Linear Regression Models",
+            "title-short": "lmtest",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=lubridate",
+            "author": [
+                {
+                    "family": "Spinu",
+                    "given": "Vitalie"
+                },
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-lubridate",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "R package version 1.7.4",
+            "title": "lubridate: Make Dealing with Dates a Little Easier",
+            "title-short": "lubridate",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=magrittr",
+            "author": [
+                {
+                    "family": "Bache",
+                    "given": "Stefan Milton"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-magrittr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "note": "R package version 1.5",
+            "title": "magrittr: A Forward-Pipe Operator for R",
+            "title-short": "magrittr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=MASS",
+            "author": [
+                {
+                    "family": "Ripley",
+                    "given": "Brian"
+                }
+            ],
+            "id": "R-MASS",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "R package version 7.3-51.5",
+            "title": "MASS: Support Functions and Datasets for Venables and Ripley’s MASS",
+            "title-short": "MASS",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=Matrix",
+            "author": [
+                {
+                    "family": "Bates",
+                    "given": "Douglas"
+                },
+                {
+                    "family": "Maechler",
+                    "given": "Martin"
+                }
+            ],
+            "id": "R-Matrix",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "R package version 1.2-18",
+            "title": "Matrix: Sparse and Dense Matrix Classes and Methods",
+            "title-short": "Matrix",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=mgcv",
+            "author": [
+                {
+                    "family": "Wood",
+                    "given": "Simon"
+                }
+            ],
+            "id": "R-mgcv",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "R package version 1.8-31",
+            "title": "mgcv: Mixed GAM Computation Vehicle with Automatic Smoothness Estimation",
+            "title-short": "mgcv",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=modelr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-modelr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.1.7",
+            "title": "modelr: Modelling Functions that Work with the Pipe",
+            "title-short": "modelr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=moonBook",
+            "author": [
+                {
+                    "family": "Moon",
+                    "given": "Keon-Woong"
+                }
+            ],
+            "id": "R-moonBook",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "R package version 0.2.3",
+            "title": "moonBook: Functions and Datasets for the Book by Keon-Woong Moon",
+            "title-short": "moonBook",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=mosaic",
+            "author": [
+                {
+                    "family": "Pruim",
+                    "given": "Randall"
+                },
+                {
+                    "family": "Kaplan",
+                    "given": "Daniel T."
+                },
+                {
+                    "family": "Horton",
+                    "given": "Nicholas J."
+                }
+            ],
+            "id": "R-mosaic",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 1.6.0",
+            "title": "mosaic: Project MOSAIC Statistics and Mathematics Teaching Utilities",
+            "title-short": "mosaic",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=mosaicData",
+            "author": [
+                {
+                    "family": "Pruim",
+                    "given": "Randall"
+                },
+                {
+                    "family": "Kaplan",
+                    "given": "Daniel"
+                },
+                {
+                    "family": "Horton",
+                    "given": "Nicholas"
+                }
+            ],
+            "id": "R-mosaicData",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "R package version 0.17.0",
+            "title": "mosaicData: Project MOSAIC Data Sets",
+            "title-short": "mosaicData",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=nasaweather",
+            "author": [
+                {
+                    "dropping-particle": "’Hadley",
+                    "family": "Wickham’"
+                }
+            ],
+            "id": "R-nasaweather",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "note": "R package version 0.1",
+            "title": "nasaweather: Collection of datasets from the ASA 2006 data expo",
+            "title-short": "nasaweather",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=nlme",
+            "author": [
+                {
+                    "family": "Pinheiro",
+                    "given": "José"
+                },
+                {
+                    "family": "Bates",
+                    "given": "Douglas"
+                },
+                {
+                    "literal": "R-core"
+                }
+            ],
+            "id": "R-nlme",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 3.1-145",
+            "title": "nlme: Linear and Nonlinear Mixed Effects Models",
+            "title-short": "nlme",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=olsrr",
+            "author": [
+                {
+                    "family": "Hebbali",
+                    "given": "Aravind"
+                }
+            ],
+            "id": "R-olsrr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.5.3",
+            "title": "olsrr: Tools for Building OLS Regression Models",
+            "title-short": "olsrr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=parsnip",
+            "author": [
+                {
+                    "family": "Kuhn",
+                    "given": "Max"
+                },
+                {
+                    "family": "Vaughan",
+                    "given": "Davis"
+                }
+            ],
+            "id": "R-parsnip",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.1.0",
+            "title": "parsnip: A Common API to Modeling and Analysis Functions",
+            "title-short": "parsnip",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=pubh",
+            "author": [
+                {
+                    "family": "Athens",
+                    "given": "Josie"
+                }
+            ],
+            "id": "R-pubh",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 1.1.6",
+            "title": "pubh: A Toolbox for Public Health and Epidemiology",
+            "title-short": "pubh",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=purrr",
+            "author": [
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-purrr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.3.4",
+            "title": "purrr: Functional Programming Tools",
+            "title-short": "purrr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=readr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Hester",
+                    "given": "Jim"
+                },
+                {
+                    "family": "Francois",
+                    "given": "Romain"
+                }
+            ],
+            "id": "R-readr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "R package version 1.3.1",
+            "title": "readr: Read Rectangular Text Data",
+            "title-short": "readr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=recipes",
+            "author": [
+                {
+                    "family": "Kuhn",
+                    "given": "Max"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-recipes",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.1.10",
+            "title": "recipes: Preprocessing Tools to Create Design Matrices",
+            "title-short": "recipes",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=reshape2",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-reshape2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 1.4.4",
+            "title": "reshape2: Flexibly Reshape Data: A Reboot of the Reshape Package",
+            "title-short": "reshape2",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=rsample",
+            "author": [
+                {
+                    "family": "Kuhn",
+                    "given": "Max"
+                },
+                {
+                    "family": "Chow",
+                    "given": "Fanny"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-rsample",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.0.6",
+            "title": "rsample: General Resampling Infrastructure",
+            "title-short": "rsample",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=scales",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Seidel",
+                    "given": "Dana"
+                }
+            ],
+            "id": "R-scales",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "R package version 1.1.0",
+            "title": "scales: Scale Functions for Visualization",
+            "title-short": "scales",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=sjlabelled",
+            "author": [
+                {
+                    "family": "Lüdecke",
+                    "given": "Daniel"
+                }
+            ],
+            "id": "R-sjlabelled",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 1.1.4",
+            "title": "sjlabelled: Labelled Data Utility Functions",
+            "title-short": "sjlabelled",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=sjPlot",
+            "author": [
+                {
+                    "family": "Lüdecke",
+                    "given": "Daniel"
+                }
+            ],
+            "id": "R-sjPlot",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 2.8.3",
+            "title": "sjPlot: Data Visualization for Statistics in Social Science",
+            "title-short": "sjPlot",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=stringr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-stringr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "R package version 1.4.0",
+            "title": "stringr: Simple, Consistent Wrappers for Common String Operations",
+            "title-short": "stringr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=tibble",
+            "author": [
+                {
+                    "family": "Müller",
+                    "given": "Kirill"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-tibble",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 3.0.1",
+            "title": "tibble: Simple Data Frames",
+            "title-short": "tibble",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=tidymodels",
+            "author": [
+                {
+                    "family": "Kuhn",
+                    "given": "Max"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-tidymodels",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.1.0",
+            "title": "tidymodels: Easily Install and Load the ’Tidymodels’ Packages",
+            "title-short": "tidymodels",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=tidyr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                }
+            ],
+            "id": "R-tidyr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 1.0.3",
+            "title": "tidyr: Tidy Messy Data",
+            "title-short": "tidyr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=tidyverse",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-tidyverse",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "R package version 1.3.0",
+            "title": "tidyverse: Easily Install and Load the ’Tidyverse’",
+            "title-short": "tidyverse",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=tune",
+            "author": [
+                {
+                    "family": "Kuhn",
+                    "given": "Max"
+                }
+            ],
+            "id": "R-tune",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.1.0",
+            "title": "tune: Tidy Tuning Tools",
+            "title-short": "tune",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=workflows",
+            "author": [
+                {
+                    "family": "Vaughan",
+                    "given": "Davis"
+                }
+            ],
+            "id": "R-workflows",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.1.1",
+            "title": "workflows: Modeling Workflows",
+            "title-short": "workflows",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=yardstick",
+            "author": [
+                {
+                    "family": "Kuhn",
+                    "given": "Max"
+                },
+                {
+                    "family": "Vaughan",
+                    "given": "Davis"
+                }
+            ],
+            "id": "R-yardstick",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 0.0.6",
+            "title": "yardstick: Tidy Characterizations of Model Performance",
+            "title-short": "yardstick",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=zoo",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Grothendieck",
+                    "given": "Gabor"
+                },
+                {
+                    "family": "Ryan",
+                    "given": "Jeffrey A."
+                }
+            ],
+            "id": "R-zoo",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "R package version 1.8-7",
+            "title": "zoo: S3 Infrastructure for Regular and Irregular Time Series (Z’s Ordered Observations)",
+            "title-short": "zoo",
+            "type": "book"
+        },
+        {
+            "URL": "http://www.stat.umn.edu/alr",
+            "author": [
+                {
+                    "family": "Weisberg",
+                    "given": "Sanford"
+                }
+            ],
+            "edition": "Third",
+            "id": "alr32005",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "publisher-place": "Hoboken NJ",
+            "title": "Applied Linear Regression",
+            "type": "book"
+        },
+        {
+            "URL": "https://socialsciences.mcmaster.ca/jfox/Books/Companion/",
+            "author": [
+                {
+                    "family": "Fox",
+                    "given": "John"
+                },
+                {
+                    "family": "Weisberg",
+                    "given": "Sanford"
+                }
+            ],
+            "edition": "Third",
+            "id": "car2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "publisher": "Sage",
+            "publisher-place": "Thousand Oaks CA",
+            "title": "An R Companion to Applied Regression",
+            "type": "book"
+        },
+        {
+            "URL": "https://journal.r-project.org/",
+            "author": [
+                {
+                    "family": "Tang",
+                    "given": "Yuan"
+                },
+                {
+                    "family": "Horikoshi",
+                    "given": "Masaaki"
+                },
+                {
+                    "family": "Li",
+                    "given": "Wenxuan"
+                }
+            ],
+            "container-title": "The R Journal",
+            "id": "ggfortify2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "title": "ggfortify: Unified Interface to Visualize Statistical Result of Popular R Packages",
+            "title-short": "ggfortify",
+            "type": "article-journal",
+            "volume": "8"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=ggfortify",
+            "author": [
+                {
+                    "family": "Horikoshi",
+                    "given": "Masaaki"
+                },
+                {
+                    "family": "Tang",
+                    "given": "Yuan"
+                }
+            ],
+            "id": "ggfortify2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "ggfortify: Data Visualization Tools for Statistical Analysis Results",
+            "title-short": "ggfortify",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-3-319-24277-4",
+            "URL": "https://ggplot2.tidyverse.org",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "ggplot22016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Springer-Verlag New York",
+            "title": "ggplot2: Elegant Graphics for Data Analysis",
+            "title-short": "ggplot2",
+            "type": "book"
+        },
+        {
+            "URL": "http://lmdvr.r-forge.r-project.org",
+            "author": [
+                {
+                    "family": "Sarkar",
+                    "given": "Deepayan"
+                }
+            ],
+            "id": "lattice2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "note": "ISBN 978-0-387-75968-5",
+            "publisher": "Springer",
+            "publisher-place": "New York",
+            "title": "Lattice: Multivariate Data Visualization with R",
+            "title-short": "Lattice",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/doc/Rnews/",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Hothorn",
+                    "given": "Torsten"
+                }
+            ],
+            "container-title": "R News",
+            "id": "lmtest2002",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "page": "7-10",
+            "title": "Diagnostic Checking in Regression Relationships",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "URL": "http://www.jstatsoft.org/v40/i03/",
+            "author": [
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "lubridate2011",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "1-25",
+            "title": "Dates and Times Made Easy with lubridate",
+            "type": "article-journal",
+            "volume": "40"
+        },
+        {
+            "URL": "http://www.stats.ox.ac.uk/pub/MASS4",
+            "author": [
+                {
+                    "family": "Venables",
+                    "given": "W. N."
+                },
+                {
+                    "family": "Ripley",
+                    "given": "B. D."
+                }
+            ],
+            "edition": "Fourth",
+            "id": "MASS2002",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "note": "ISBN 0-387-95457-0",
+            "publisher": "Springer",
+            "publisher-place": "New York",
+            "title": "Modern Applied Statistics with S",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wood",
+                    "given": "S. N."
+                }
+            ],
+            "container-title": "Journal of the Royal Statistical Society (B)",
+            "id": "mgcv2011",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "3-36",
+            "title": "Fast stable restricted maximum likelihood and marginal likelihood estimation of semiparametric generalized linear models",
+            "type": "article-journal",
+            "volume": "73"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wood",
+                    "given": "S. N."
+                },
+                {
+                    "literal": "N."
+                },
+                {
+                    "literal": "Pya"
+                },
+                {
+                    "family": "S\"afken",
+                    "given": "B."
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "mgcv2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "1548-1575",
+            "title": "Smoothing parameter and model selection for general smooth models (with discussion)",
+            "type": "article-journal",
+            "volume": "111"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wood",
+                    "given": "S. N."
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "mgcv2004",
+            "issue": "467",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "page": "673-686",
+            "title": "Stable and efficient multiple smoothing parameter estimation for generalized additive models",
+            "type": "article-journal",
+            "volume": "99"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wood",
+                    "given": "S. N"
+                }
+            ],
+            "edition": "2",
+            "id": "mgcv2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "title": "Generalized Additive Models: An Introduction with R",
+            "title-short": "Generalized Additive Models",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wood",
+                    "given": "S. N."
+                }
+            ],
+            "container-title": "Journal of the Royal Statistical Society (B)",
+            "id": "mgcv2003",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "page": "95-114",
+            "title": "Thin-plate regression splines",
+            "type": "article-journal",
+            "volume": "65"
+        },
+        {
+            "ISBN": "978-89-5566-179-8",
+            "author": [
+                {
+                    "family": "Moon",
+                    "given": "Keon_Woong"
+                }
+            ],
+            "id": "moonBook2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "Hannarae Seoul",
+            "title": "R statistics and graphs for medical papers",
+            "type": "book"
+        },
+        {
+            "URL": "https://journal.r-project.org/archive/2017/RJ-2017-024/index.html",
+            "author": [
+                {
+                    "family": "Pruim",
+                    "given": "Randall"
+                },
+                {
+                    "family": "Kaplan",
+                    "given": "Daniel T"
+                },
+                {
+                    "family": "Horton",
+                    "given": "Nicholas J"
+                }
+            ],
+            "container-title": "The R Journal",
+            "id": "mosaic2017",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "77-102",
+            "title": "The mosaic Package: Helping Students to ’Think with Data’ Using R",
+            "title-short": "The mosaic Package",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "URL": "http://www.jstatsoft.org/v21/i12/",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "reshape22007",
+            "issue": "12",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "page": "1-20",
+            "title": "Reshaping Data with the reshape Package",
+            "type": "article-journal",
+            "volume": "21"
+        },
+        {
+            "DOI": "10.5281/zenodo.1249215",
+            "URL": "https://CRAN.R-project.org/package=sjlabelled",
+            "author": [
+                {
+                    "family": "Lüdecke",
+                    "given": "Daniel"
+                }
+            ],
+            "id": "sjlabelled2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "sjlabelled: Labelled Data Utility Functions (Version 1.1.4)",
+            "title-short": "sjlabelled",
+            "type": "book"
+        },
+        {
+            "DOI": "10.21105/joss.01686",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Averick",
+                    "given": "Mara"
+                },
+                {
+                    "family": "Bryan",
+                    "given": "Jennifer"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "McGowan",
+                    "given": "Lucy D’Agostino"
+                },
+                {
+                    "family": "François",
+                    "given": "Romain"
+                },
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                },
+                {
+                    "family": "Hayes",
+                    "given": "Alex"
+                },
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Hester",
+                    "given": "Jim"
+                },
+                {
+                    "family": "Kuhn",
+                    "given": "Max"
+                },
+                {
+                    "family": "Pedersen",
+                    "given": "Thomas Lin"
+                },
+                {
+                    "family": "Miller",
+                    "given": "Evan"
+                },
+                {
+                    "family": "Bache",
+                    "given": "Stephan Milton"
+                },
+                {
+                    "family": "Müller",
+                    "given": "Kirill"
+                },
+                {
+                    "family": "Ooms",
+                    "given": "Jeroen"
+                },
+                {
+                    "family": "Robinson",
+                    "given": "David"
+                },
+                {
+                    "family": "Seidel",
+                    "given": "Dana Paige"
+                },
+                {
+                    "family": "Spinu",
+                    "given": "Vitalie"
+                },
+                {
+                    "family": "Takahashi",
+                    "given": "Kohske"
+                },
+                {
+                    "family": "Vaughan",
+                    "given": "Davis"
+                },
+                {
+                    "family": "Wilke",
+                    "given": "Claus"
+                },
+                {
+                    "family": "Woo",
+                    "given": "Kara"
+                },
+                {
+                    "family": "Yutani",
+                    "given": "Hiroaki"
+                }
+            ],
+            "container-title": "Journal of Open Source Software",
+            "id": "tidyverse2019",
+            "issue": "43",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "1686",
+            "title": "Welcome to the tidyverse",
+            "type": "article-journal",
+            "volume": "4"
+        },
+        {
+            "DOI": "10.18637/jss.v014.i06",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Grothendieck",
+                    "given": "Gabor"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "zoo2005",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "page": "1-27",
+            "title": "zoo: S3 Infrastructure for Regular and Irregular Time Series",
+            "title-short": "zoo",
+            "type": "article-journal",
+            "volume": "14"
+        }
+    ],
+    "project_biblios": [
+        "book.bib",
+        "packages.bib"
+    ]
+}

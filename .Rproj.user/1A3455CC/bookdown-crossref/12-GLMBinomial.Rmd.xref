@@ -1,0 +1,30 @@
+h1:glmbinomial GLM respuesta binomial
+h2:tipos-de-datos-binomiales Tipos de datos binomiales
+h3:información-individualizada-por-sujeto Información individualizada por sujeto
+h4:datos-de-kifosis Datos de Kifosis
+h3:información-agrupada-por-sujetos Información agrupada por sujetos
+h4:datos-dosis-respuesta Datos dosis-respuesta
+h2:especificación-e-hipótesis-de-modelo Especificación e hipótesis de modelo
+h3:funciones-link Funciones link
+h4:link-logit link logit
+h4:link-probit link probit
+h4:link-cloglog link cloglog
+h3:representación-de-las-funciones-link Representación de las funciones link
+h2:estimación-y-bondad-de-ajuste Estimación y bondad de ajuste
+h3:ejemplos Ejemplos
+h4:kyphosis Kyphosis
+h4:dosis-respuesta Dosis-Respuesta
+h2:selección-del-modelo Selección del modelo
+h3:ejemplos-1 Ejemplos
+h4:kyphosis-1 Kyphosis
+h4:dosis-respuesta-1 Dosis-respuesta
+h2:diagnóstico Diagnóstico
+h3:ejemplos-2 Ejemplos
+h4:kyphosis-2 Kyphosis
+h4:dosis---respuesta Dosis - respuesta
+h2:predicción Predicción
+h3:ejemplos-3 Ejemplos
+h4:kyphosis-3 Kyphosis
+h4:dosis-respuesta-2 Dosis-respuesta
+h2:ejercicios Ejercicios
+

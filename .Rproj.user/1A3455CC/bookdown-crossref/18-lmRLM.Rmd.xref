@@ -1,0 +1,71 @@
+h1:rlm Regresión Lineal Múltiple y Polinómica
+fig:rlm001 Gráfico de dispersión de Volumen respecto de cada predictora.
+fig:rlm002 Gráfico de dispersión de la concentración del fármaco respecto de cada predictora.
+fig:rlm003 Gráfico de dispersión de resistencia del papel vs concentración de madera.
+h2:tipos-de-modelos Tipos de modelos
+h3:modelos-de-rlm Modelos de RLM
+h3:modelos-de-rp Modelos de RP
+h3:expresión-en-r-de-los-modelos Expresión en R de los modelos
+h3:modelo-saturado-y-anidado Modelo saturado y anidado
+h2:estimación-e-inferencia Estimación e inferencia
+h3:mínimos-cuadrados Mínimos cuadrados
+h3:propiedades Propiedades
+h3:máxima-verosimilitud Máxima verosimilitud
+h3:inferencia Inferencia
+h4:varianza-del-modelo Varianza del modelo
+h4:coeficientes-del-modelo Coeficientes del modelo
+h3:ejemplos Ejemplos
+h4:datos-de-bosque Datos de Bosque
+h4:datos-de-concentración Datos de concentración
+h4:datos-de-papel Datos de papel
+h2:bondad-del-ajuste Bondad del ajuste
+h3:tabla-anova Tabla ANOVA
+h3:coeficiente-determinación Coeficiente determinación
+h3:ejemplos-1 Ejemplos
+h4:datos-de-bosque-1 Datos de Bosque
+h4:datos-de-concentración-1 Datos de Concentración
+h4:datos-de-papel-1 Datos de Papel
+h2:comparación-y-selección-de-modelos Comparación y selección de modelos
+h3:significatividad-de-los-predictores Significatividad de los predictores
+h3:estadísticos-aic-y-bic Estadísticos AIC y BIC
+h3:selección-automática Selección automática
+h3:funciones-en-r Funciones en R
+h3:ejemplos-2 Ejemplos
+h4:datos-de-bosque-2 Datos de Bosque
+h4:datos-de-concentración-2 Datos de Concentración
+h4:datos-de-papel-2 Datos de Papel
+h2:multicolinealidad Multicolinealidad
+h3:causas Causas
+h3:efectos Efectos
+h3:diagnósticos Diagnósticos
+h3:soluciones Soluciones
+h3:ejemplos-3 Ejemplos
+h4:datos-de-bosque-3 Datos de bosque
+h4:datos-de-concentración-3 Datos de concentración
+h4:datos-de-papel-3 Datos de papel
+h2:diagnóstico Diagnóstico
+h3:tipos-de-residuos Tipos de Residuos
+h4:residuos-comunes Residuos comunes
+h4:residuos-estandarizados. Residuos estandarizados.
+h3:linealidad Linealidad
+h3:homocedasticidad Homocedasticidad
+h3:normalidad Normalidad
+h3:incorrelación Incorrelación
+h3:soluciones-a-problemas-detectados-en-el-diagnóstico-del-modelo Soluciones a problemas detectados en el diagnóstico del modelo
+h3:análisis-de-influencia Análisis de influencia
+h4:sobre-los-coeficientes-del-modelo Sobre los coeficientes del modelo
+h4:influencia-sobre-las-predicciones Influencia sobre las predicciones
+h4:influencia-sobre-la-precisión-de-las-estimaciones Influencia sobre la precisión de las estimaciones
+h3:funciones-para-diagnóstico-e-influencia Funciones para diagnóstico e influencia
+h3:ejemplos-4 Ejemplos
+h4:datos-de-bosque-4 Datos de Bosque
+h4:datos-de-concentración-4 Datos de Concentración
+h4:datos-de-papel-4 Datos de Papel
+h2:predicción Predicción
+h3:estimación-de-la-respuesta-media. Estimación de la respuesta media.
+h3:predicción-de-nuevas-observaciones. Predicción de nuevas observaciones.
+h3:ejemplos-5 Ejemplos
+h4:datos-de-bosque-5 Datos de bosque
+h4:datos-de-papel-5 Datos de papel
+h2:ejercicios Ejercicios
+

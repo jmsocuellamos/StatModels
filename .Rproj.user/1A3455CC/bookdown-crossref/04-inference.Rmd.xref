@@ -1,0 +1,38 @@
+h1:inferencia-básica Inferencia básica
+h2:estimador-y-estimación Estimador y estimación
+h2:información-contenida-en-la-muestra Información contenida en la muestra
+h2:procedimientos-de-inferencia-estadística Procedimientos de inferencia estadística
+h3:estimación-puntual Estimación puntual
+h4:estimador-de-una-proporción Estimador de una proporción
+h4:estimador-de-una-media Estimador de una media
+h4:estimador-de-una-varianza Estimador de una varianza
+h3:distribución-en-el-muestreo Distribución en el muestreo
+h4:distribución-en-el-muestreo-de-una-media-poblacional-con-varianza-poblacional-conocida Distribución en el muestreo de una media poblacional con varianza poblacional conocida
+h4:distribución-en-el-muestreo-de-una-media-poblacional-con-varianza-poblacional-desconocida Distribución en el muestreo de una media poblacional con varianza poblacional desconocida
+h4:distribución-en-el-muestreo-de-una-varianza-poblacional Distribución en el muestreo de una varianza poblacional
+h4:distribución-en-el-muestreo-de-una-proporción-poblacional Distribución en el muestreo de una proporción poblacional
+h4:error-estándar Error estándar
+h3:estimación-por-intervalos-de-confianza Estimación por intervalos de confianza
+h4:ic-para-una-proporción IC para una proporción
+h4:ic-para-la-media IC para la media
+h4:intervalo-de-confianza-para-la-varianza Intervalo de confianza para la varianza
+h3:contraste-de-hipótesis Contraste de hipótesis
+h4:posibles-contrastes Posibles contrastes
+h4:resolución-de-contraste Resolución de contraste
+h4:una-proporción Una proporción
+h4:una-media Una media
+h2:inferencia-para-dos-poblaciones Inferencia para dos poblaciones
+h2:inferencia-para-dos-proporciones Inferencia para dos proporciones
+h3:estimador-puntual Estimador puntual
+h3:estimador-por-intervalos-de-confianza Estimador por intervalos de confianza
+h3:contraste-de-hipótesis-1 Contraste de hipótesis
+h2:inferencia-para-dos-medias Inferencia para dos medias
+h3:análisis-de-dos-varianzas-poblacionales Análisis de dos varianzas poblacionales
+h3:dos-medias-para-poblaciones-independientes-con-varianzas-iguales Dos medias para poblaciones independientes con varianzas iguales
+h3:dos-medias-para-poblaciones-independientes-con-varianzas-distintas Dos medias para poblaciones independientes con varianzas distintas
+h3:dos-medias-para-poblaciones-emparejadas Dos medias para poblaciones emparejadas
+h2:procedimientos-no-paramétricos Procedimientos no paramétricos
+h3:normalidad Normalidad
+h3:dos-medianas-en-poblaciones-independientes Dos medianas en poblaciones independientes
+h3:dos-medianas-en-poblaciones-dependientes Dos medianas en poblaciones dependientes
+

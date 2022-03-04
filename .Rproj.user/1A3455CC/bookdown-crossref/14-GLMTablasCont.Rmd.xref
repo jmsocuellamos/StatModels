@@ -1,0 +1,37 @@
+h1:glmtablascont GLM para tablas de contingencia
+h2:bancos-de-datos Bancos de datos
+h3:melanoma Melanoma
+h3:gripe Gripe
+h3:aspirina Aspirina
+h3:aspiraciones Aspiraciones
+h3:contraceptivos Contraceptivos
+h3:satisfacción-laboral Satisfacción laboral
+h2:modelos-log-lineales Modelos Log-Lineales
+h3:especificación-en-r Especificación en R
+h3:ejemplos Ejemplos
+h4:melanoma-1 Melanoma
+h4:aspirina-1 Aspirina
+h4:gripe-1 Gripe
+h4:aspiraciones-1 Aspiraciones
+h2:modelos-logit-multinomial Modelos Logit-Multinomial
+h2:estimación Estimación
+h3:respuesta-binaria-nominal-y-predictora-nominal Respuesta binaria nominal y predictora nominal
+h4:datos-aspirina Datos Aspirina
+h3:respuesta-multinomial-nominal-y-predictora-nominal Respuesta multinomial nominal y predictora nominal
+h3:respuesta-nominal-predictora-ordinal Respuesta nominal, predictora ordinal
+h4:datos-aspiraciones-universitarias Datos Aspiraciones universitarias
+h4:datos-de-contraceptivos Datos de Contraceptivos
+h3:respuesta-ordinal-predictora-nominal Respuesta ordinal, predictora nominal
+h4:datos-de-gripe Datos de gripe
+h3:respuesta-ordinal-predictora-ordinal Respuesta ordinal, predictora ordinal
+h4:datos-satisfacción-laboral Datos Satisfacción laboral
+h2:diagnóstico Diagnóstico
+h3:ejemplos-1 Ejemplos
+h4:aspirina-2 Aspirina
+h4:aspiraciones-2 Aspiraciones
+h4:contraceptivos-1 Contraceptivos
+h4:gripe-2 Gripe
+h4:satisfacción-laboral-1 Satisfacción laboral
+h2:predicción Predicción
+h2:ejercicios Ejercicios
+

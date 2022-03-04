@@ -1,0 +1,23 @@
+h1:glmsuperv GLM para datos de supervivencia
+h2:funciones-de-supervivencia Funciones de supervivencia
+h3:supervivencia-completa Supervivencia completa
+h3:supervivencia-por-un-factor Supervivencia por un factor
+h3:test-de-comparación Test de comparación
+h2:análisis-preliminar Análisis preliminar
+h3:leucemia Leucemia
+h3:veteranos Veteranos
+h3:cáncer-de-pulmón Cáncer de pulmón
+h2:modelos-de-supervivencia Modelos de supervivencia
+h3:hipótesis-del-modelo Hipótesis del modelo
+h3:análisis-cáncer-de-pulmón Análisis Cáncer de pulmón
+h4:estimación-del-modelo Estimación del modelo
+h4:diagnóstico-del-modelo Diagnóstico del modelo
+h5:riesgos-porporcionales Riesgos porporcionales
+h5:observaciones-influyentes Observaciones influyentes
+h5:no-linealidad No linealidad
+h3:múltiples-predictoras Múltiples predictoras
+h3:diagnóstico-del-modelo-1 Diagnóstico del modelo
+h4:riesgos-porporcionales-1 Riesgos porporcionales
+h4:observaciones-influyentes-1 Observaciones influyentes
+h2:ejercicios Ejercicios
+

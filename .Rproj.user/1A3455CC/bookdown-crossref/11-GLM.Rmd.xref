@@ -1,0 +1,15 @@
+h1:glm Modelos Lineales Generalizados
+h2:modelo-teórico Modelo Teórico
+h3:distribución-binomial-logit-link Distribución Binomial (logit link)
+h4:ejemplo Ejemplo
+h3:distribución-poisson-log-link Distribución Poisson (log link)
+h4:ejemplo-1 Ejemplo
+h3:distribución-normal-link-identidad Distribución Normal (link identidad)
+h3:distribución-gamma-link-recíproco Distribución Gamma (link recíproco)
+h4:ejemplo-2 Ejemplo
+h2:estimación-de-los-glm Estimación de los GLM
+h2:bondad-del-ajuste Bondad del ajuste
+h2:comparación-de-modelos Comparación de modelos
+h2:diagnóstico-de-los-glm Diagnóstico de los GLM
+h2:predicción-de-los-glm Predicción de los GLM
+

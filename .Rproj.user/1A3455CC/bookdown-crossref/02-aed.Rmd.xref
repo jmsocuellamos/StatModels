@@ -1,0 +1,81 @@
+h1:aed Análisis exploratorio de datos
+h2:objetivos Objetivos
+h2:variabilidad Variabilidad
+h2:procesado-inicial Procesado inicial
+h3:operaciones-con-sujetos Operaciones con sujetos
+h4:filtrado Filtrado
+h4:ordenación Ordenación
+h3:trabajando-con-variables Trabajando con variables
+h4:selección Selección
+h4:creación Creación
+h4:creación-de-factores Creación de factores
+h3:reuniendo-los-datos Reuniendo los datos
+h2:análisis-descriptivo-inicial Análisis Descriptivo inicial
+h3:una-variable-factor Una variable factor
+h4:resúmenes-numéricos Resúmenes numéricos
+eq:freqrel
+El porcentaje de la categoría  es simplemente . La forma más sencilla para obtener la tabla de frecuencias absoluta asociada con una variable categórica es la función .h4:visualización-gráfica Visualización gráfica
+h5:gráfico-barras Gráfico barras
+fig:aed006 Gráfico de barras del tipo de tormenta.
+fig:aed007 Gráfico de barras del tipo de tormenta (versión 2).
+fig:aed008 Gráfico de barras del tipo de tormenta (versión 3).
+fig:aed009 Gráfico de barras del tipo de tormenta (versión 4).
+fig:aed010 Gráfico de barras del tipo de tormenta (versión 5).
+fig:aed011 Gráfico de barras del porcentaje de cada tipo de tormenta.
+h3:una-variable-numérica Una variable numérica
+h4:resúmenes-numéricos-1 Resúmenes numéricos
+h5:medidas-de-tendencia-central Medidas de tendencia central
+h5:medidas-de-dispersión Medidas de dispersión
+eq:sd
+Las funciones de R para calcular ambas cantidades son  para la varianza y  para la desviación típica.eq:iqr
+Obviamente, cuanto más dispersos estén los datos, mayor será el IQR. La razón por la que preferimos usar IQR para medir la dispersión es que solo depende de los datos en el  de una distribución de muestra. Esto lo hace robusto a la presencia de valores atípicos. Podemos usar la función  para calcular el rango intercuartílico:h5:resúmenes-conjuntos Resúmenes conjuntos
+h4:visualización-gráfica-1 Visualización gráfica
+h5:gráfico-barras-1 Gráfico barras
+fig:aed018 Histograma de la presión atmosférica.
+fig:aed019 Histograma de la presión atmosférica (modificando binwidth).
+fig:aed020 Histograma de la velocidad del viento.
+fig:aed021 Gráfico de cajas de la presión atmosférica.
+fig:aed022 Gráfico de cajas de la presión atmosférica (versión 2).
+fig:aed023 Gráfico de cajas de la velocidad del viento.
+h3:dos-variables-categóricas Dos variables categóricas
+h4:resúmenes-numéricos-2 Resúmenes numéricos
+h4:visualización-gráfica-2 Visualización gráfica
+fig:aed027 Gráfico de barras apiladas para tipo de tormenta versus año.
+fig:aed028 Gráfico de barras agrupado para el tipo de tormenta versus año.
+fig:aed029 Gráfico de barras agrupado (porcentjes) para el tipo de tormenta versus año.
+fig:aed030 Mapa de intensidad para el tipo de tormenta versus año.
+h3:categórica-vs-numérica Categórica vs Numérica
+h4:resúmenes-numéricos-3 Resúmenes numéricos
+h4:visualización-gráfica-3 Visualización gráfica
+fig:aed032 Gráficos de densidades de la velocidad del viento por tipo de tormenta.
+fig:aed033 Gráficos de densidades de la presión atmosférica por tipo de tormenta.
+fig:aed034 Gráficos de cajas de la velocidad del viento por tipo de tormenta.
+fig:aed035 Gráficos de cajas de la presión atmosférica por tipo de tormenta.
+fig:aed036 Gráficos matricial de velocidad del viento por tipo de tormenta
+fig:aed037 Gráficos matricial de velocidad del viento por tipo de tormenta
+fig:aed038 Gráficos matricial de velocidad del viento por tipo de tormenta
+fig:aed039 Gráficos matricial (grid) de velocidad del viento por tipo de tormenta
+h3:dos-variables-numéricas Dos variables numéricas
+h4:resúmenes-numéricos-4 Resúmenes numéricos
+h4:visualización-gráfica-4 Visualización gráfica
+fig:aed042 Gráfico de dispersión de velocidad del viento vs presión atmosférica
+fig:aed043 Gráfico de dispersión de velocidad del viento vs presión atmosférica (versión dos).
+fig:aed044 Gráfico de cajas discretizando la velocidad del viento vs presión atmosférica.
+h2:análisis-descriptivo-avanzado Análisis Descriptivo avanzado
+h3:tres-factores Tres factores
+fig:aed046 Gráfico de barras para tipo de tormenta para los diferentes meses y años.
+fig:aed047 Gráfico de barras para tipo de tormenta para los diferentes meses y años (versión 2).
+h3:dos-factores-una-numérica Dos factores, Una numérica
+fig:aed049 Gráfico de densidad de la velocidad del viento para cada tipo de tormenta y año.
+fig:aed050 Gráfico de cajas de la velocidad del viento para cada tipo de tormenta y año.
+fig:aed051 Gráfico de cajas de la velocidad del viento para cada tipo de tormenta y año (versión 2).
+h3:un-factor-dos-numéricas Un factor, Dos numéricas
+fig:aed053 Gráfico de dispersion de presión vs velocidad para cada tipo de tormenta.
+fig:aed054 Gráfico de dispersion de presión vs velocidad para cada tipo de tormenta.
+h3:dos-factores-dos-numéricas Dos factores, Dos numéricas
+fig:aed056 Gráfico de dispersion de presión vs velocidad para cada tipo de tormenta y año.
+fig:aed057 Gráfico de dispersion de presión vs velocidad para cada tipo de tormenta y mes
+h3:tres-factores-dos-numéricas Tres factores, Dos numéricas
+fig:aed059 Gráfico de dispersion de presión vs velocidad para cada tipo de tormenta, año y mes.
+h2:librería-de-interés Librería de interés
+

@@ -1,0 +1,73 @@
+h1:rls Regresión Lineal Simple (RLS)
+h2:bancos-de-datos Bancos de datos
+fig:rls001 Gráfico de dispersión de pérdida de peso vs contenido en hierro.
+fig:rls002 Gráfico de dispersión de resistencia del papel vs concentración de madera.
+fig:rls002-1 Gráfico de dispersión de viscosidad vs cantidad de aceite.
+h2:modelorls El modelo RLS
+eq:expectedRLS
+Es de esperar cierta desviación  entre la respuesta observada y la respuesta media. Dicha desviación es denominada  y denotada habitualmente por . Así, el modelo completo de regresión simple se formula según:eq:RLS
+Los coeficientes de la regresión, esto es, los parámetros que hemos de estimar para ajustar el modelo RLS son:eq:RLSobs
+donde  son errores aleatorios, que además se consideran incorrelados, con media cero y varianza constante . Estas características constituyen las , que formulamos con más detalle a continuación sobre los errores aleatorios :h2:estimacionrls Estimación del modelo
+eq:predRLS
+donde  denota el valor de  predicho por la recta para el valor observado de .h3:mincuadrls Estimación Mínimos Cuadrados
+eq:mincuadRLS
+La solución de mínimos cuadrados  se obtiene minimizando . El mínimo se consigue derivando  respecto de  y  e igualando a cero:h3:emvrls Estimación Máximo Verosímil
+eq:hiprls
+esto es, hablamos de errores aleatorios independientes e idénticamente distribuidos (iid) según una distribución Normal con media cero y varianza , lo que implica directamente que la distribución para la variable respuesta será:eq:modelhiprls
+Desde este momento, los datos proporcionan información sobre los parámetros del modelo, , a través de la verosimilitud conjunta:eq:likelihoodrls
+Por tanto, obtener la solución más factible a la vista de los datos observados  equivale a obtener la solución máximo-verosímil, esto es, la que maximiza la verosimilitud @ref(eq:likelihoodrls). Maximizar la verosimilitud es equivalente a maximizar la log-verosimilitud , que tiene una expresión más sencilla sin exponenciales. La solución máximo-verosímil se obtiene derivando e igualando a cero , lo que da lugar, de nuevo, a las ecuaciones normales. Así pues, la solución máximo-verosímil coincide con la de mínimos cuadrados.h3:emR Estimación con R
+h3:ejemplos Ejemplos
+fig:rls006 Ajuste máximo verosímil para los datos de corrosión.
+fig:rls005 Ajuste de mínimos cuadrados para los datos de corrosión.
+h3:propiedades-de-la-recta-de-regresión. Propiedades de la recta de regresión.
+h3:rls_varmodel Estimación varianza del modelo.
+h3:inferencia-sobre-los-coeficientes-del-modelo Inferencia sobre los coeficientes del modelo
+h4:procedimientos-de-estimación Procedimientos de estimación
+h4:procedimientos-de-contrastes-de-hipótesis Procedimientos de Contrastes de Hipótesis
+h3:ejemplo Ejemplo
+h2:bondad-del-ajuste Bondad del Ajuste
+h3:rls_errorresidual Error residual
+h3:rls_tablaanova Tabla Anova
+eq:descomprespu
+y el hecho de que , podemos escribir:eq:descompvar
+Las abreviaturas ,  y  provienen del inglés para suma de cuadrados (): Total, debida al Error (o residual) y debida a la Regresión, respectivamente. A partir de ellas es posible calcular la variabilidad total, la variabilidad explicada por el modelo obtenido, y la variabilidad que queda por explicar o variabilidad residual, sin más que dividir las sumas de cuadrados por sus respectivos grados de libertad. Obtenemos así los cuadrados medios asociados, ,  y .eq:contrastemodel
+eq:estatFRLS
+En el modelo RLS, el estadístico  es igual al estadístico  asociado a , elevado al cuadrado. Ya hemos dicho antes que el contraste de bondad de ajuste es equivalente al de .h3:coeficiente-de-determinación Coeficiente de determinación
+eq:Rsquad
+De hecho, en el modelo RLS,  es el cuadrado del coeficiente de regresión lineal entre la respuesta  y el predictor .h3:ejemplo-1 Ejemplo
+h2:rls_diag Diagnóstico del Modelo
+eq:hipolinealidad
+eq:hipohomocedasticidad
+eq:hipoincorrelacion
+eq:hiponormalidad
+h3:linealidad-y-homocedasticidad. Linealidad y homocedasticidad.
+h3:ejemplo-2 Ejemplo
+fig:rls009 Gráfico de residuos estandarizados vs valores ajustados.
+h3:normalidad Normalidad
+fig:rls011 Gráfico de normalidad de los residuos estandarizados.
+h3:independencia. Independencia.
+fig:rls013 Gráfico de autocorrelación de los residuos estandarizados.
+h3:otros-gráficos-de-diagnóstico Otros gráficos de diagnóstico
+h3:incumplimiento-de-hipótesis Incumplimiento de hipótesis
+h3:análisis-de-influencia Análisis de influencia
+h3:transformaciones Transformaciones
+h3:ejemplos-1 Ejemplos
+h4:papel Papel
+fig:rls015 Ajuste para los datos de resitencia del papel
+fig:rls016 Gráfico de residuos vs ajustados para el modelo de papel
+h4:viscosidad Viscosidad
+fig:rls018 Ajuste para los datos de viscosidad
+fig:rls028 Gráfico de autocorrelación de los residuos estandarizados.
+h2:rls_pred Predicción del modelo
+h3:respuesta-media Respuesta media
+eq:RLSbandaspredmean
+h3:nueva-observación Nueva observación
+Predeciremos una futura observación de la variable  para cierto valor de , coneq:RLSpredone
+y el intervalo de confianza vendrá dado por:eq:RLSpredone1
+Notar que tanto la estimación de la respuesta media como la predicción coinciden, aunque difieren en cuanto al grado de incertidumbre de la misma. Como es de esperar, predecir un hecho puntual en el futuro conlleva más incertidumbre que estimar en términos medios qué va a a ocurrir. Por último, comentar que cuando hemos utilizado alguna transformación (monótona) sobre la respuesta y queremos recuperar la estimación o predicción de ésta en su escala original, basta con utilizar la transformación recíproca sobre el valor predicho para obtener la predicción en la escala original.h3:ejemplos-2 Ejemplos
+h4:corrosión Corrosión
+fig:rls031 Predicción para los datos de corrosión (media e IC95%).
+h4:viscosidad-1 Viscosidad
+fig:rls034 Predicción para los datos de log(viscosidad) (media e IC95%).
+fig:rls035 Predicción para los datos de viscosidad (media e IC95%).
+
