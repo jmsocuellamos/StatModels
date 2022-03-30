@@ -49,11 +49,12 @@
 <li><a class="" href="anova.html"><span class="header-section-number">8</span> Modelos ANOVA</a></li>
 <li><a class="active" href="ancova.html"><span class="header-section-number">9</span> Modelos ANCOVA</a></li>
 <li><a class="" href="smooth.html"><span class="header-section-number">10</span> Modelos aditivos lineales</a></li>
-<li><a class="" href="glm.html"><span class="header-section-number">11</span> Modelos Lineales Generalizados</a></li>
-<li><a class="" href="glmbinomial.html"><span class="header-section-number">12</span> GLM respuesta binomial</a></li>
-<li><a class="" href="glmpoisson.html"><span class="header-section-number">13</span> GLM Poisson</a></li>
-<li><a class="" href="glmtablascont.html"><span class="header-section-number">14</span> GLM para tablas de contingencia</a></li>
-<li><a class="" href="glmsuperv.html"><span class="header-section-number">15</span> GLM para datos de supervivencia</a></li>
+<li><a class="" href="mmixed.html"><span class="header-section-number">11</span> Modelos Lineales Mixtos</a></li>
+<li><a class="" href="glm.html"><span class="header-section-number">12</span> Modelos Lineales Generalizados</a></li>
+<li><a class="" href="glmbinomial.html"><span class="header-section-number">13</span> GLM respuesta binomial</a></li>
+<li><a class="" href="glmpoisson.html"><span class="header-section-number">14</span> GLM Poisson</a></li>
+<li><a class="" href="glmtablascont.html"><span class="header-section-number">15</span> GLM para tablas de contingencia</a></li>
+<li><a class="" href="glmsuperv.html"><span class="header-section-number">16</span> GLM para datos de supervivencia</a></li>
 <li><a class="" href="referencias.html">Referencias</a></li>
 </ul>
 
@@ -936,8 +937,8 @@ Observations
 <p>Obtenemos ahora el gráfico de predicción en la escala original. Deshacemos el cambio de raíz cuadrada y representamos de nuevo las bandas de confianza.</p>
 <div class="sourceCode" id="cb507"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Creamos grid de predicción</span>
-<span class="va">newdata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>thorax <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">min</a></span><span class="op">(</span><span class="va">longevidad</span><span class="op">$</span><span class="va">thorax</span><span class="op">)</span>, 
-                                       <span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">max</a></span><span class="op">(</span><span class="va">longevidad</span><span class="op">$</span><span class="va">thorax</span><span class="op">)</span>, 
+<span class="va">newdata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>thorax <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">min</a></span><span class="op">(</span><span class="va">longevidad</span><span class="op">$</span><span class="va">thorax</span><span class="op">)</span>, 
+                                       <span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">max</a></span><span class="op">(</span><span class="va">longevidad</span><span class="op">$</span><span class="va">thorax</span><span class="op">)</span>, 
                                        <span class="fl">.01</span><span class="op">)</span>,
                                    each<span class="op">=</span><span class="fl">5</span><span class="op">)</span>, 
 actividad <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"G1"</span>, <span class="st">"G2"</span>, <span class="st">"G3"</span>, <span class="st">"G4"</span>, <span class="st">"G5"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
@@ -1040,7 +1041,7 @@ actividad <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Modelos Estadísticos</strong>" was written by true, true. It was last built on 2022-03-03.</p>
+    <p>"<strong>Modelos Estadísticos</strong>" was written by true, true. It was last built on 2022-03-25.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -1,0 +1,81 @@
+---
+title: "Trabajo 2: Modelos RLM"
+author: "Nombre"
+output: html_document
+---
+
+```{r librerias, echo=FALSE}
+library(tidyverse)
+library(tidymodels)
+library(stringr)
+library(forcats)
+library(lubridate)
+library(magrittr)
+library(broom)
+library(pubh)
+library(datasets)
+library(lmtest)
+library(MASS)
+library(kableExtra)
+library(mosaic)
+library(latex2exp)
+library(moonBook)
+library(sjlabelled)
+library(sjPlot)
+library(reshape2)
+library(olsrr)
+library(ggfortify)
+library(mgcv)
+library(modelr)
+library(alr4)
+library(equatiomatic) 
+library(survival)
+library(survminer)
+
+theme_set(theme_sjplot2())
+
+```
+
+::: {style="text-align: justify"}
+# Estudio de caso 1: Producción de Energía Eléctrica
+
+El conjunto de datos contiene 9568 puntos de datos recogidos de una central eléctrica de ciclo combinado a lo largo de 6 años (2006-2011), cuando la central se puso a trabajar a plena carga. Las características recogidas son los promedios por hora de diferentes variables de tipo ambiental: Temperatura (**T**), Presión Ambiental (**AP**), Humedad Relativa (**HR**) y Vacío de Escape (**V**). Se está interesado en predecir la producción de energía eléctrica neta por hora (**EP**) de la planta en función de las varaibles ambientales.
+
+A continuación se muestra el código para la carga del banco de datos.
+:::
+
+```{r}
+plantaep<-read_csv("https://raw.githubusercontent.com/jmsocuellamos/DatosBIOTEC/master/trabajos2122/mult_linear_reg.csv")
+```
+
+::: {style="text-align: justify"}
+Para este banco de datos construye el modelo que mejor se adapte a las posibles relaciones entre variables predictoras y respuesta. Para obtener dicho modelo ten en cuenta el proceso de selección que consideres más adecuado y la fase de diagnóstico. Interpreta de forma adecuada los coeficientes del modelo resultante y establece cuales serán los patrones de producción electrica más convenientes en función de las variables ambientales.
+
+Por último ¿cuál será la predicción de producción de energia eléctrica en los tres escenarios siguientes:
+
+1.  Tomando los valores medios de las variables predictoras presentes en el modelo.
+2.  Tomando los percentiles 25 de las variables predictoras presentes en el modelo.
+3.  Tomando los percentiles 75 de las variables predictoras presentes en el modelo.
+:::
+
+::: {style="text-align: justify"}
+# Estudio de caso 2: Fabricación de hormigón
+
+El conjunto de datos hace referencia a las pruebas de calidad para la obtención de hormigón. Más concretamente se está interesado en estudiar la dureza del hormigón (**Strength**) en función de las variables usadas en su fabricación: **Cement**, **Blast_Furnace_Slag**, **Fly_Ash**, **Water**, **Superplasticizer**, **Coarse_Aggregate**, **Fine_Aggregate**, y **Age**.
+
+A continuación se muestra el código para la carga del banco de datos.
+:::
+
+```{r}
+concrete<-read_csv("https://raw.githubusercontent.com/jmsocuellamos/DatosBIOTEC/master/trabajos2122/concrete_data.csv")
+```
+
+::: {style="text-align: justify"}
+Para este banco de datos construye el modelo que mejor se adapte a las posibles relaciones entre variables predictoras y respuesta. Para obtener dicho modelo ten en cuenta el proceso de selección que consideres más adecuado y la fase de diagnóstico. Interpreta de forma adecuada los coeficientes del modelo resultante y establece cuales serán los patrones de dureza de hormigón más convenientes en función de las variables utilizadas en la fabricación.
+
+Por último ¿cuál será la dureza del hormigón en los tres escenarios siguientes:
+
+1.  Tomando los valores medios de las variables predictoras presentes en el modelo.
+2.  Tomando los percentiles 25 de las variables predictoras presentes en el modelo.
+3.  Tomando los percentiles 75 de las variables predictoras presentes en el modelo.
+:::

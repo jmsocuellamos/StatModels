@@ -1,0 +1,49 @@
+---
+title: "kkfile"
+author: "J. Morales"
+date: "2/7/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# R Markdown
+
+```{r librerias, echo=FALSE}
+library(tidyverse)
+library(tidymodels)
+library(stringr)
+library(forcats)
+library(lubridate)
+library(magrittr)
+library(broom)
+library(pubh)
+library(datasets)
+library(lmtest)
+library(MASS)
+library(kableExtra)
+library(mosaic)
+library(latex2exp)
+library(moonBook)
+library(sjlabelled)
+library(sjPlot)
+library(reshape2)
+library(olsrr)
+library(ggfortify)
+library(mgcv)
+library(modelr)
+library(alr4)
+library(equatiomatic) 
+library(survival)
+library(survminer)
+```
+
+
+```{r setup, echo=FALSE}
+theme_set(theme_sjplot2())
+```
+
+

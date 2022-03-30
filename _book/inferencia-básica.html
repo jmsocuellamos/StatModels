@@ -49,11 +49,12 @@
 <li><a class="" href="anova.html"><span class="header-section-number">8</span> Modelos ANOVA</a></li>
 <li><a class="" href="ancova.html"><span class="header-section-number">9</span> Modelos ANCOVA</a></li>
 <li><a class="" href="smooth.html"><span class="header-section-number">10</span> Modelos aditivos lineales</a></li>
-<li><a class="" href="glm.html"><span class="header-section-number">11</span> Modelos Lineales Generalizados</a></li>
-<li><a class="" href="glmbinomial.html"><span class="header-section-number">12</span> GLM respuesta binomial</a></li>
-<li><a class="" href="glmpoisson.html"><span class="header-section-number">13</span> GLM Poisson</a></li>
-<li><a class="" href="glmtablascont.html"><span class="header-section-number">14</span> GLM para tablas de contingencia</a></li>
-<li><a class="" href="glmsuperv.html"><span class="header-section-number">15</span> GLM para datos de supervivencia</a></li>
+<li><a class="" href="mmixed.html"><span class="header-section-number">11</span> Modelos Lineales Mixtos</a></li>
+<li><a class="" href="glm.html"><span class="header-section-number">12</span> Modelos Lineales Generalizados</a></li>
+<li><a class="" href="glmbinomial.html"><span class="header-section-number">13</span> GLM respuesta binomial</a></li>
+<li><a class="" href="glmpoisson.html"><span class="header-section-number">14</span> GLM Poisson</a></li>
+<li><a class="" href="glmtablascont.html"><span class="header-section-number">15</span> GLM para tablas de contingencia</a></li>
+<li><a class="" href="glmsuperv.html"><span class="header-section-number">16</span> GLM para datos de supervivencia</a></li>
 <li><a class="" href="referencias.html">Referencias</a></li>
 </ul>
 
@@ -338,14 +339,14 @@ cuya distribución en el muestreo es <span class="math inline">\(N(0,1)\)</span>
 <span class="math display">\[\left\{\begin{array}{ll} H_0: &amp; \theta \leq 0.55\\ H_a: &amp; \theta &gt; 0.55 \end{array}\right.\]</span></p>
 <p><em>Para verificar dichios contarstes se irradiaron 1000 huevos de los que resultaron 572 larvas.</em></p>
 <blockquote>
-<p>Para resolver contrastes en estas situaciones utiliamos la función <code><a href="https://rdrr.io/pkg/mosaic/man/prop.test.html">prop.test()</a></code></p>
+<p>Para resolver contrastes en estas situaciones utiliamos la función <code><a href="https://www.mosaic-web.org/mosaic/reference/prop.test.html">prop.test()</a></code></p>
 </blockquote>
 <div class="sourceCode" id="cb143"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Situación 1</span>
 <span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">1000</span>
 <span class="va">larvas</span> <span class="op">&lt;-</span> <span class="fl">572</span>
 <span class="co"># Debemos fijar el valor del contraste, el tipo (two.sided), y el nivel de significación o su análogo como el nivel de confianza</span>
-<span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/prop.test.html">prop.test</a></span><span class="op">(</span><span class="va">larvas</span>, <span class="va">n</span>, p <span class="op">=</span> <span class="fl">0.5</span>, alternative <span class="op">=</span> <span class="st">"two.sided"</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/prop.test.html">prop.test</a></span><span class="op">(</span><span class="va">larvas</span>, <span class="va">n</span>, p <span class="op">=</span> <span class="fl">0.5</span>, alternative <span class="op">=</span> <span class="st">"two.sided"</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
 <pre><code>## 
 ##  1-sample proportions test with continuity correction
 ## 
@@ -363,7 +364,7 @@ cuya distribución en el muestreo es <span class="math inline">\(N(0,1)\)</span>
 <span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">1000</span>
 <span class="va">larvas</span> <span class="op">&lt;-</span> <span class="fl">572</span>
 <span class="co"># Debemos fijar el valor del contraste, el tipo (two.sided), y el nivel de significación o su análogo como el nivel de confianza</span>
-<span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/prop.test.html">prop.test</a></span><span class="op">(</span><span class="va">larvas</span>, <span class="va">n</span>, p <span class="op">=</span> <span class="fl">0.6</span>, alternative <span class="op">=</span> <span class="st">"less"</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/prop.test.html">prop.test</a></span><span class="op">(</span><span class="va">larvas</span>, <span class="va">n</span>, p <span class="op">=</span> <span class="fl">0.6</span>, alternative <span class="op">=</span> <span class="st">"less"</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
 <pre><code>## 
 ##  1-sample proportions test with continuity correction
 ## 
@@ -381,7 +382,7 @@ cuya distribución en el muestreo es <span class="math inline">\(N(0,1)\)</span>
 <span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">1000</span>
 <span class="va">larvas</span> <span class="op">&lt;-</span> <span class="fl">572</span>
 <span class="co"># Debemos fijar el valor del contraste, el tipo (two.sided), y el nivel de significación o su análogo como el nivel de confianza</span>
-<span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/prop.test.html">prop.test</a></span><span class="op">(</span><span class="va">larvas</span>, <span class="va">n</span>, p <span class="op">=</span> <span class="fl">0.55</span>, alternative <span class="op">=</span> <span class="st">"greater"</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/prop.test.html">prop.test</a></span><span class="op">(</span><span class="va">larvas</span>, <span class="va">n</span>, p <span class="op">=</span> <span class="fl">0.55</span>, alternative <span class="op">=</span> <span class="st">"greater"</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
 <pre><code>## 
 ##  1-sample proportions test with continuity correction
 ## 
@@ -408,12 +409,12 @@ cuya distribución en el muestreo es una <span class="math inline">\(t\)</span> 
 <p><span class="math display">\[\left\{\begin{array}{ll} H_0: &amp; \mu \geq 335\\ H_a: &amp; \mu &lt; 335 \end{array}\right.\]</span>
 <em>Para tratar de ratificar su hipótesis Se ha analizado el aire en 20 puntos elegidos aleatoriamente a una misma altura cerca del suelo, resultando los siguientes datos: 332, 320, 312, 270, 330, 354, 356, 310, 341, 313, 223, 224, 305, 321, 325, 333, 332, 345, 312, 331.</em></p>
 <blockquote>
-<p>Para resolver este contraste utilizamos la función <code><a href="https://rdrr.io/pkg/mosaic/man/ttest.html">t.test()</a></code></p>
+<p>Para resolver este contraste utilizamos la función <code><a href="https://www.mosaic-web.org/mosaic/reference/ttest.html">t.test()</a></code></p>
 </blockquote>
 <div class="sourceCode" id="cb149"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">datos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">332</span>, <span class="fl">320</span>, <span class="fl">312</span>, <span class="fl">270</span>, <span class="fl">330</span>, <span class="fl">354</span>, <span class="fl">356</span>, <span class="fl">310</span>, <span class="fl">341</span>, <span class="fl">313</span>, <span class="fl">223</span>, <span class="fl">224</span>, <span class="fl">305</span>, <span class="fl">321</span>, <span class="fl">325</span>, <span class="fl">333</span>, <span class="fl">332</span>, <span class="fl">345</span>, <span class="fl">312</span>, <span class="fl">331</span><span class="op">)</span>
 <span class="co"># Debemos fijar el valor del contraste, el tipo (two.sided), y el nivel de significación o su análogo como el nivel de confianza</span>
-<span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/ttest.html">t.test</a></span><span class="op">(</span><span class="va">datos</span>, mu <span class="op">=</span> <span class="fl">335</span>, alternative <span class="op">=</span> <span class="st">"less"</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/ttest.html">t.test</a></span><span class="op">(</span><span class="va">datos</span>, mu <span class="op">=</span> <span class="fl">335</span>, alternative <span class="op">=</span> <span class="st">"less"</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
@@ -499,9 +500,9 @@ Como ocurre con las proporciones, se considera que las medias son iguales cuando
 <h3>
 <span class="header-section-number">4.5.2</span> Estimador por intervalos de confianza<a class="anchor" aria-label="anchor" href="#estimador-por-intervalos-de-confianza"><i class="fas fa-link"></i></a>
 </h3>
-<p>Para obtener el intervalo de confianza para la diferencia de proporciones utilizamos la función <code><a href="https://rdrr.io/pkg/mosaic/man/prop.test.html">prop.test()</a></code>. Esta función también nos permite realizar el correspondiente contarte pero por le momento solo pediremos los resultados referidos al intervalo de confianza.</p>
+<p>Para obtener el intervalo de confianza para la diferencia de proporciones utilizamos la función <code><a href="https://www.mosaic-web.org/mosaic/reference/prop.test.html">prop.test()</a></code>. Esta función también nos permite realizar el correspondiente contarte pero por le momento solo pediremos los resultados referidos al intervalo de confianza.</p>
 <div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">analisis</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/prop.test.html">prop.test</a></span><span class="op">(</span><span class="va">mejoras</span>,<span class="va">muestra</span>,conf.level <span class="op">=</span> <span class="fl">0.90</span><span class="op">)</span>
+<code class="sourceCode R"><span class="va">analisis</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/prop.test.html">prop.test</a></span><span class="op">(</span><span class="va">mejoras</span>,<span class="va">muestra</span>,conf.level <span class="op">=</span> <span class="fl">0.90</span><span class="op">)</span>
 <span class="co"># Intervalo de confianza</span>
 <span class="va">analisis</span><span class="op">$</span><span class="va">conf.int</span></code></pre></div>
 <pre><code>## [1] 0.0654468 0.2260498
@@ -518,7 +519,7 @@ Como ocurre con las proporciones, se considera que las medias son iguales cuando
 donde estamos interesados en verificar si las proporciones de éxito poblacionales pueden considerarse iguales o distintas.</p>
 <p>Para los datos de nuestro ejemplo tenemos:</p>
 <div class="sourceCode" id="cb155"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">analisis</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/prop.test.html">prop.test</a></span><span class="op">(</span><span class="va">mejoras</span>,<span class="va">muestra</span>,conf.level <span class="op">=</span> <span class="fl">0.90</span><span class="op">)</span>
+<code class="sourceCode R"><span class="va">analisis</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/prop.test.html">prop.test</a></span><span class="op">(</span><span class="va">mejoras</span>,<span class="va">muestra</span>,conf.level <span class="op">=</span> <span class="fl">0.90</span><span class="op">)</span>
 <span class="co"># Resultados completos</span>
 <span class="va">analisis</span></code></pre></div>
 <pre><code>## 
@@ -730,7 +731,7 @@ donde estamos interesados en verificar si las proporciones de éxito poblacional
 ##          0.3052007</code></pre>
 <p>Puesto que el pvalor es inferior a la significatividad prefijada podemos concluir que hya evidencias estad´sitivas apra concluir que las varaibilidades en ambas poblaciones pueden considerarse distintas.</p>
 <blockquote>
-<p>En todos los análisis inferenciales asociados con la comparación de dos medias utilizamos la función <code><a href="https://rdrr.io/pkg/mosaic/man/ttest.html">t.test()</a></code>, aunque con difrentes opciones en función de que las varianzas sean iguales o no, o de que las muestras sean independientes o no.*</p>
+<p>En todos los análisis inferenciales asociados con la comparación de dos medias utilizamos la función <code><a href="https://www.mosaic-web.org/mosaic/reference/ttest.html">t.test()</a></code>, aunque con difrentes opciones en función de que las varianzas sean iguales o no, o de que las muestras sean independientes o no.*</p>
 </blockquote>
 </div>
 <div id="dos-medias-para-poblaciones-independientes-con-varianzas-iguales" class="section level3" number="4.6.2">
@@ -744,7 +745,7 @@ donde estamos interesados en verificar si las proporciones de éxito poblacional
 <code class="sourceCode R"><span class="co"># Cargamos los datos</span>
 <span class="va">MetodoA</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10.7</span>, <span class="fl">11.2</span>, <span class="fl">15.3</span>, <span class="fl">14.9</span>, <span class="fl">13.9</span>, <span class="fl">15</span>, <span class="fl">15.6</span>, <span class="fl">15.7</span>, <span class="fl">14.3</span>, <span class="fl">10.8</span><span class="op">)</span>
 <span class="va">MetodoB</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">11.1</span>, <span class="fl">11.4</span>, <span class="fl">15</span>, <span class="fl">15.1</span>, <span class="fl">14.3</span>, <span class="fl">15.4</span>, <span class="fl">15.4</span>, <span class="fl">16</span>, <span class="fl">14.3</span>, <span class="fl">11.2</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/ttest.html">t.test</a></span><span class="op">(</span><span class="va">MetodoA</span>, <span class="va">MetodoB</span>, alternative <span class="op">=</span> <span class="st">"two.sided"</span>, var.equal <span class="op">=</span> <span class="cn">TRUE</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/ttest.html">t.test</a></span><span class="op">(</span><span class="va">MetodoA</span>, <span class="va">MetodoB</span>, alternative <span class="op">=</span> <span class="st">"two.sided"</span>, var.equal <span class="op">=</span> <span class="cn">TRUE</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
@@ -768,7 +769,7 @@ donde estamos interesados en verificar si las proporciones de éxito poblacional
 <code class="sourceCode R"><span class="co"># Cargamos los datos</span>
 <span class="va">TipoA</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1614</span>,<span class="fl">1094</span>,<span class="fl">1293</span>,<span class="fl">1643</span>,<span class="fl">1466</span>,<span class="fl">1270</span>,<span class="fl">1340</span>,<span class="fl">1380</span>,<span class="fl">1081</span>,<span class="fl">1497</span><span class="op">)</span>
 <span class="va">TipoB</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1383</span>,<span class="fl">1138</span>,<span class="fl">920</span>,<span class="fl">1143</span>,<span class="fl">1017</span>,<span class="fl">961</span>,<span class="fl">1627</span>,<span class="fl">821</span>,<span class="fl">1711</span>,<span class="fl">865</span>,<span class="fl">1662</span>,<span class="fl">1698</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/ttest.html">t.test</a></span><span class="op">(</span><span class="va">TipoA</span>, <span class="va">TipoB</span>, alternative <span class="op">=</span> <span class="st">"two.sided"</span>, var.equal <span class="op">=</span> <span class="cn">TRUE</span>, conf.level <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/ttest.html">t.test</a></span><span class="op">(</span><span class="va">TipoA</span>, <span class="va">TipoB</span>, alternative <span class="op">=</span> <span class="st">"two.sided"</span>, var.equal <span class="op">=</span> <span class="cn">TRUE</span>, conf.level <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
@@ -788,13 +789,13 @@ donde estamos interesados en verificar si las proporciones de éxito poblacional
 </h3>
 <p>Es muy habitual que en ciertas situaciones experimentales nos encontramos que queremos estudiar la evolución (medidas antes -después) de un grupo de sujetos después de ser sometidos a cierta prueba experimental. En esta caso no tenemos dos poblaciones independientes sino sólo una que medimos en dos ocasiones. Por tanto, los procedimientos anteriores tienen que ser modificados para tener en cuenta esta situación. El constaste de hipótesis para esta situación viene dado por:</p>
 <p><span class="math display">\[\left\{\begin{array}{ll} H_0: &amp; \mu_{antes} = \mu_{despues}\\ H_a: &amp; \mu_{antes} \neq \mu_{despues} \end{array}\right.\]</span></p>
-<p>De nuevo podemos utilizar la función <code><a href="https://rdrr.io/pkg/mosaic/man/ttest.html">t.test()</a></code> con el parámetro <code>paired</code>.</p>
+<p>De nuevo podemos utilizar la función <code><a href="https://www.mosaic-web.org/mosaic/reference/ttest.html">t.test()</a></code> con el parámetro <code>paired</code>.</p>
 <p>Utilizamos los datos del ejemplo 3, donde tenemos una única muestra de sujetos</p>
 <div class="sourceCode" id="cb165"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Cargamos los datos</span>
 <span class="va">antes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">7.3</span>,<span class="fl">8.2</span>,<span class="fl">6.3</span>,<span class="fl">5.2</span>,<span class="fl">6.9</span>,<span class="fl">5.8</span>,<span class="fl">5.3</span>,<span class="fl">7.1</span>,<span class="fl">6.9</span>,<span class="fl">8.1</span><span class="op">)</span>
 <span class="va">despues</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">8.2</span>,<span class="fl">7.9</span>,<span class="fl">6.4</span>,<span class="fl">5.1</span>,<span class="fl">7.1</span>,<span class="fl">6.3</span>,<span class="fl">5.9</span>,<span class="fl">8.2</span>,<span class="fl">7.1</span>,<span class="fl">7.7</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/ttest.html">t.test</a></span><span class="op">(</span><span class="va">antes</span>, <span class="va">despues</span>, alternative <span class="op">=</span> <span class="st">"two.sided"</span>, paired <span class="op">=</span> <span class="cn">TRUE</span>, var.equal <span class="op">=</span> <span class="cn">TRUE</span>, conf.level <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/ttest.html">t.test</a></span><span class="op">(</span><span class="va">antes</span>, <span class="va">despues</span>, alternative <span class="op">=</span> <span class="st">"two.sided"</span>, paired <span class="op">=</span> <span class="cn">TRUE</span>, var.equal <span class="op">=</span> <span class="cn">TRUE</span>, conf.level <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span></code></pre></div>
 <pre><code>## 
 ##  Paired t-test
 ## 
@@ -955,7 +956,7 @@ donde estamos interesados en verificar si las proporciones de éxito poblacional
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Modelos Estadísticos</strong>" was written by true, true. It was last built on 2022-03-03.</p>
+    <p>"<strong>Modelos Estadísticos</strong>" was written by true, true. It was last built on 2022-03-25.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

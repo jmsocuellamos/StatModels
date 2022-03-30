@@ -33,6 +33,7 @@ rmd_files:
     "08-lmANOVA.Rmd",
     "09-lmANCOVA.Rmd",
     "10-Smooth.Rmd", 
+    "20-Mixtos.Rmd",
     "11-GLM.Rmd", 
     "12-GLMBinomial.Rmd", 
     "13-GLMPoisson.Rmd", 

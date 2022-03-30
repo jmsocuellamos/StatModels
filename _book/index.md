@@ -5,7 +5,7 @@ author:
     affiliation: "[Instituto Universitario de Investigación CIO-UMH](https://cio.umh.es)"
   - name: "Javier Morales (j.morales@umh.es). [Web personal](https://sites.google.com/goumh.umh.es/javier-morales)"
     affiliation: "[Instituto Universitario de Investigación CIO-UMH](https://cio.umh.es)"
-date: "2022-03-03"
+date: "2022-03-25"
 site: bookdown::bookdown_site
 documentclass: book
 description: "Modelos estadísticos. Una visión práctica."

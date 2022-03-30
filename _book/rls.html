@@ -49,11 +49,12 @@
 <li><a class="" href="anova.html"><span class="header-section-number">8</span> Modelos ANOVA</a></li>
 <li><a class="" href="ancova.html"><span class="header-section-number">9</span> Modelos ANCOVA</a></li>
 <li><a class="" href="smooth.html"><span class="header-section-number">10</span> Modelos aditivos lineales</a></li>
-<li><a class="" href="glm.html"><span class="header-section-number">11</span> Modelos Lineales Generalizados</a></li>
-<li><a class="" href="glmbinomial.html"><span class="header-section-number">12</span> GLM respuesta binomial</a></li>
-<li><a class="" href="glmpoisson.html"><span class="header-section-number">13</span> GLM Poisson</a></li>
-<li><a class="" href="glmtablascont.html"><span class="header-section-number">14</span> GLM para tablas de contingencia</a></li>
-<li><a class="" href="glmsuperv.html"><span class="header-section-number">15</span> GLM para datos de supervivencia</a></li>
+<li><a class="" href="mmixed.html"><span class="header-section-number">11</span> Modelos Lineales Mixtos</a></li>
+<li><a class="" href="glm.html"><span class="header-section-number">12</span> Modelos Lineales Generalizados</a></li>
+<li><a class="" href="glmbinomial.html"><span class="header-section-number">13</span> GLM respuesta binomial</a></li>
+<li><a class="" href="glmpoisson.html"><span class="header-section-number">14</span> GLM Poisson</a></li>
+<li><a class="" href="glmtablascont.html"><span class="header-section-number">15</span> GLM para tablas de contingencia</a></li>
+<li><a class="" href="glmsuperv.html"><span class="header-section-number">16</span> GLM para datos de supervivencia</a></li>
 <li><a class="" href="referencias.html">Referencias</a></li>
 </ul>
 
@@ -1181,8 +1182,8 @@ Figura 6.11: Predicción para los datos de log(viscosidad) (media e IC95%).
 </div>
 <div class="sourceCode" id="cb243"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Construímos una secuencia de predicción</span>
-<span class="va">newdata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>aceite <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">min</a></span><span class="op">(</span><span class="va">aceites</span><span class="op">$</span><span class="va">aceite</span><span class="op">)</span>,
-                                   <span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">max</a></span><span class="op">(</span><span class="va">aceites</span><span class="op">$</span><span class="va">aceite</span><span class="op">)</span>, 
+<span class="va">newdata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>aceite <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">min</a></span><span class="op">(</span><span class="va">aceites</span><span class="op">$</span><span class="va">aceite</span><span class="op">)</span>,
+                                   <span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">max</a></span><span class="op">(</span><span class="va">aceites</span><span class="op">$</span><span class="va">aceite</span><span class="op">)</span>, 
                                    length <span class="op">=</span> <span class="fl">50</span><span class="op">)</span><span class="op">)</span>
 <span class="co"># Predicción para la media de la respuesta</span>
 <span class="va">newdata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">newdata</span>, <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">fit.aceite2</span>, 
@@ -1274,7 +1275,7 @@ Figura 6.12: Predicción para los datos de viscosidad (media e IC95%).
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Modelos Estadísticos</strong>" was written by true, true. It was last built on 2022-03-03.</p>
+    <p>"<strong>Modelos Estadísticos</strong>" was written by true, true. It was last built on 2022-03-25.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

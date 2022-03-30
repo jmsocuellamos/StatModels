@@ -49,11 +49,12 @@
 <li><a class="" href="anova.html"><span class="header-section-number">8</span> Modelos ANOVA</a></li>
 <li><a class="" href="ancova.html"><span class="header-section-number">9</span> Modelos ANCOVA</a></li>
 <li><a class="" href="smooth.html"><span class="header-section-number">10</span> Modelos aditivos lineales</a></li>
-<li><a class="" href="glm.html"><span class="header-section-number">11</span> Modelos Lineales Generalizados</a></li>
-<li><a class="" href="glmbinomial.html"><span class="header-section-number">12</span> GLM respuesta binomial</a></li>
-<li><a class="" href="glmpoisson.html"><span class="header-section-number">13</span> GLM Poisson</a></li>
-<li><a class="" href="glmtablascont.html"><span class="header-section-number">14</span> GLM para tablas de contingencia</a></li>
-<li><a class="" href="glmsuperv.html"><span class="header-section-number">15</span> GLM para datos de supervivencia</a></li>
+<li><a class="" href="mmixed.html"><span class="header-section-number">11</span> Modelos Lineales Mixtos</a></li>
+<li><a class="" href="glm.html"><span class="header-section-number">12</span> Modelos Lineales Generalizados</a></li>
+<li><a class="" href="glmbinomial.html"><span class="header-section-number">13</span> GLM respuesta binomial</a></li>
+<li><a class="" href="glmpoisson.html"><span class="header-section-number">14</span> GLM Poisson</a></li>
+<li><a class="" href="glmtablascont.html"><span class="header-section-number">15</span> GLM para tablas de contingencia</a></li>
+<li><a class="" href="glmsuperv.html"><span class="header-section-number">16</span> GLM para datos de supervivencia</a></li>
 <li><a class="" href="referencias.html">Referencias</a></li>
 </ul>
 
@@ -640,7 +641,7 @@
 <p>Para obtener los porcentajes en lugar de los conteos podemos utilizar le código siguiente</p>
 <div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">type_counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">type</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">type_counts</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">sum</a></span><span class="op">(</span><span class="va">type_counts</span><span class="op">)</span>,<span class="fl">2</span><span class="op">)</span> <span class="co"># Redondeamos a dos decimales</span></code></pre></div>
+<span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">type_counts</span> <span class="op">/</span> <span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">sum</a></span><span class="op">(</span><span class="va">type_counts</span><span class="op">)</span>,<span class="fl">2</span><span class="op">)</span> <span class="co"># Redondeamos a dos decimales</span></code></pre></div>
 <pre><code>## 
 ##       Extratropical           Hurricane Tropical Depression      Tropical Storm 
 ##                0.15                0.33                0.19                0.34</code></pre>
@@ -650,7 +651,7 @@
 <span class="va">tabla_tipo</span> <span class="op">&lt;-</span> <span class="va">storm</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  <span class="co"># agrupamos por la variable factor</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">type</span><span class="op">)</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>     <span class="co"># resumimos contando el número de casos de cada nivel del factor</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>n<span class="op">=</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>       <span class="co"># Para calcular los porcentajes</span>
-<span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">tabla_tipo</span>,percent<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">100</span><span class="op">*</span><span class="va">n</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">tabla_tipo</span>,percent<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">100</span><span class="op">*</span><span class="va">n</span><span class="op">/</span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code>## # A tibble: 4 × 3
 ##   type                    n percent
 ##   &lt;chr&gt;               &lt;int&gt;   &lt;dbl&gt;
@@ -664,9 +665,9 @@
 </blockquote>
 <p>Las funciones más habituales que se utilizan con <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code> son:</p>
 <ul>
-<li>Localización: <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">mean()</a></code> (media), <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">median()</a></code> (mediana)</li>
-<li>Escala: <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">sd()</a></code> (desviación típica), <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">IQR()</a></code> (rango intercuartílico)</li>
-<li>Rango: <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">min()</a></code> (mínimo), <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">max()</a></code> (máximo), <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">quantile()</a></code> (cuantil)</li>
+<li>Localización: <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">mean()</a></code> (media), <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">median()</a></code> (mediana)</li>
+<li>Escala: <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">sd()</a></code> (desviación típica), <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">IQR()</a></code> (rango intercuartílico)</li>
+<li>Rango: <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">min()</a></code> (mínimo), <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">max()</a></code> (máximo), <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">quantile()</a></code> (cuantil)</li>
 <li>Posición: <code><a href="https://dplyr.tidyverse.org/reference/nth.html">first()</a></code> (primero), <code><a href="https://dplyr.tidyverse.org/reference/nth.html">last()</a></code> (último), <code><a href="https://dplyr.tidyverse.org/reference/nth.html">nth()</a></code> (posición n-ésima)</li>
 <li>Conteo: <code><a href="https://dplyr.tidyverse.org/reference/context.html">n()</a></code> (número de casos), <code><a href="https://dplyr.tidyverse.org/reference/n_distinct.html">n_distinct()</a></code> (número de casos distintos)</li>
 </ul>
@@ -789,24 +790,24 @@ Figura 2.6: Gráfico de barras del porcentaje de cada tipo de tormenta.
   \bar{x} = \frac{\sum_{i=1}^n x_i}{n}
   (\#eq:samplemean)
 \end{equation}\]</span></p>
-<p>Para obtener la media utilizamos la función <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">mean()</a></code></p>
+<p>Para obtener la media utilizamos la función <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">mean()</a></code></p>
 <div class="sourceCode" id="cb64"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">mean</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">mean</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 54.68329</code></pre>
 <div class="sourceCode" id="cb66"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">mean</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">mean</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 989.8238</code></pre>
 <p>Esto nos dice que la media de la velocidad del viento es de 55 mph y que la media de la presión es de 989.82 milibares. ¿Como podemos interpretar esos resultados?</p>
 <p>Una limitación de la media aritmética es que se ve afectada por la forma de la distribución de los datos. Es muy sensible a los extremos de una muestra. Esta es la razón por la cual, por ejemplo, no tiene mucho sentido mirar el ingreso medio de los trabajadores en un país para tener una idea de lo que gana una persona “típica”. La distribución del ingreso es muy asimétrica, y los pocos que tienen la suerte de ganar salarios muy buenos tienden a cambiar la media hacia arriba y superar cualquier cosa que sea realmente “típica”. La media de la muestra también se ve fuertemente afectada por la presencia de ‘valores atípicos’ o valores extremos, es decir, valores inusualmente grandes o pequeños en una muestra.</p>
-<p>Debido a que la media muestral es sensible a la forma de una distribución y la presencia de valores atípicos, a menudo se prefiere una segunda medida de tendencia central: la mediana de la muestra. La mediana de una muestra es el número que separa los datos en dos subgrupos (la mitad superior de la mitad inferior). Podemos calcular la mediana muestral en R con la función <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">median()</a></code>:</p>
+<p>Debido a que la media muestral es sensible a la forma de una distribución y la presencia de valores atípicos, a menudo se prefiere una segunda medida de tendencia central: la mediana de la muestra. La mediana de una muestra es el número que separa los datos en dos subgrupos (la mitad superior de la mitad inferior). Podemos calcular la mediana muestral en R con la función <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">median()</a></code>:</p>
 <div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">median</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">median</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 50</code></pre>
 <div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">median</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">median</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 995</code></pre>
 <p>Estos resultados indican que el 50% de de los registros muestran una valor de viento inferior a 50 mph. De la misma forma el 50% de los datos muestran una valor de la presión inferior a 995 milibares.</p>
-<p>Otras medidas de localización son el mínimo, el máximo y los percentiles. Los percentiles son los valores que dividen en la muestra según el valor del percentil solicitado. Si solicitamos el percentil 20, se separa la muestra en dos subconjuntos dejando el 20% en un grupo y e 80% en el otro. Los percentiles más habituales son lo denominados primer y tercer cuartil que corresponden a los percentiles 25 y 75 respectivamente. Para obtener el percentil asociado a una variable numérica podemos hacer uso de la función <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">quantile()</a></code>. Para ver como se debe utilizar es útil consultar la ayuda de dicha función <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">help(quantile)</a></code>.</p>
+<p>Otras medidas de localización son el mínimo, el máximo y los percentiles. Los percentiles son los valores que dividen en la muestra según el valor del percentil solicitado. Si solicitamos el percentil 20, se separa la muestra en dos subconjuntos dejando el 20% en un grupo y e 80% en el otro. Los percentiles más habituales son lo denominados primer y tercer cuartil que corresponden a los percentiles 25 y 75 respectivamente. Para obtener el percentil asociado a una variable numérica podemos hacer uso de la función <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">quantile()</a></code>. Para ver como se debe utilizar es útil consultar la ayuda de dicha función <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">help(quantile)</a></code>.</p>
 </div>
 <div id="medidas-de-dispersión" class="section level5" number="2.4.2.1.2">
 <h5>
@@ -820,13 +821,13 @@ Figura 2.6: Gráfico de barras del porcentaje de cada tipo de tormenta.
   s = \sqrt{s^2}
   \tag{2.2}
 \end{equation}\]</span>
-<p>Las funciones de R para calcular ambas cantidades son <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">var()</a></code> para la varianza y <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">sd()</a></code> para la desviación típica.</p>
+<p>Las funciones de R para calcular ambas cantidades son <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">var()</a></code> para la varianza y <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">sd()</a></code> para la desviación típica.</p>
 <div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">var</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span><span class="op">)</span>;<span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">sd</a></span><span class="op">(</span><span class="va">storms</span><span class="op">$</span><span class="va">wind</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">var</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span><span class="op">)</span>;<span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">sd</a></span><span class="op">(</span><span class="va">storms</span><span class="op">$</span><span class="va">wind</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 668.1444</code></pre>
 <pre><code>## [1] 25.84849</code></pre>
 <div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">var</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span>;<span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">sd</a></span><span class="op">(</span><span class="va">storms</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">var</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span>;<span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">sd</a></span><span class="op">(</span><span class="va">storms</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 349.4912</code></pre>
 <pre><code>## [1] 18.69468</code></pre>
 <p>¿Qué significa ese número en realidad? Las variaciones son siempre no negativas. Una pequeña varianza indica que las observaciones tienden a ser cercanas a la media (y una a la otra), mientras que una alta varianza indica que las observaciones están muy dispersas. Una varianza de cero solo ocurre si todos los valores son idénticos. Sin embargo, es difícil interpretar si una varianza muestral es realmente “pequeña” o “grande” porque el cálculo involucra desviaciones al cuadrado. Por ejemplo, cambiar la escala de medición de una variable por 10 implica un cambio de 100 veces (102) en la varianza.</p>
@@ -836,12 +837,12 @@ Figura 2.6: Gráfico de barras del porcentaje de cada tipo de tormenta.
  IQR = Q_3 - Q_1
   \tag{2.3}
 \end{equation}\]</span>
-<p>Obviamente, cuanto más dispersos estén los datos, mayor será el IQR. La razón por la que preferimos usar IQR para medir la dispersión es que solo depende de los datos en el “medio” de una distribución de muestra. Esto lo hace robusto a la presencia de valores atípicos. Podemos usar la función <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">IQR()</a></code> para calcular el rango intercuartílico:</p>
+<p>Obviamente, cuanto más dispersos estén los datos, mayor será el IQR. La razón por la que preferimos usar IQR para medir la dispersión es que solo depende de los datos en el “medio” de una distribución de muestra. Esto lo hace robusto a la presencia de valores atípicos. Podemos usar la función <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">IQR()</a></code> para calcular el rango intercuartílico:</p>
 <div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">IQR</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">IQR</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 35</code></pre>
 <div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">IQR</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">IQR</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 24</code></pre>
 <p>La última medidad de dispersión que veremos es el coeficiente de variación. Esta medida es una de las más habituales y se obtiene a partir de la media y desviación típica muestral como: <span class="math display">\[\begin{equation} 
  CV = \frac{s}{\bar{x}}
@@ -1227,18 +1228,18 @@ Figura 2.24: Gráficos matricial (grid) de velocidad del viento por tipo de torm
   (\#eq:coefcorrel)
 \end{equation}\]</span></p>
 <p>donde <span class="math inline">\(x_i\)</span>, <span class="math inline">\(y_i\)</span> son las observaciones de la variable <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> respectivamente, <span class="math inline">\(\bar{x}\)</span>, <span class="math inline">\(\bar{y}\)</span> son las medias muestrales de cada variable, y <span class="math inline">\(s_x\)</span>, <span class="math inline">\(s_y\)</span> son las desviaciones típica de cada variable. El coeficiente trata de valorar la “covaraición” entre ambas variables, es decir, como afectan los cambios de valores en una variable en los valores de la otra, teniendo en cuenta la propia variabilidad de cada una de ellas.</p>
-<p>Para obtener el coeficiente de correlación utilizamos la función <code><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">cor()</a></code>.</p>
+<p>Para obtener el coeficiente de correlación utilizamos la función <code><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">cor()</a></code>.</p>
 <div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">cor</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span>,<span class="va">storm</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">cor</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span>,<span class="va">storm</span><span class="op">$</span><span class="va">pressure</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] -0.9254911</code></pre>
 <p>El coeficiente de correlación resulta negativo, lo que indica que la velocidad del viento tiende a disminuir al aumentar la presión. Al estar próximo a -1 se puede intuir que dicha asociación es muy fuerte. Sin embargo, el coeficiente de correlación de Pearson debe interpretarse con cuidado debido a que está diseñado para medir una relación de tipo lineal, lo que implica que dicho coeficiente será engañoso cuando esta relación sea curva, o incluso peor, en forma de joroba.</p>
 <p>¿Qué deberíamos hacer si pensamos que la relación entre dos variables no es lineal? No deberíamos usar el coeficiente de correlación de Pearson para medir la asociación en este caso. En cambio, podemos calcular lo que denominamos correlación de rango. La idea es muy simple. En lugar de trabajar con los valores reales de cada variable, los “clasificamos”, es decir, ordenamos cada variable de menor a mayor y asignamos las etiquetas “primero”, “segundo”, “tercero”, etc. a diferentes observaciones. Las medidas de correlación de rangos se basan en una comparación de los rangos resultantes. Los dos más populares son Spearman’s y Kendall’s. Ambos coeficientes se comportan de una manera muy similar al coeficiente de correlación de Pearson. Toman un valor de 0 si los rangos no están correlacionados, y un valor de +1 o -1 si están perfectamente relacionados.</p>
 <p>Podemos calcular ambos coeficientes de correlación de rangos en R usando nuevamente la función cor. Esta vez necesitamos establecer el argumento del método en el valor apropiado: <code>method = "kendall"</code> o <code>method = "spearman"</code>.</p>
 <div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">cor</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span>,<span class="va">storm</span><span class="op">$</span><span class="va">pressure</span>,method <span class="op">=</span> <span class="st">"kendall"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">cor</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span>,<span class="va">storm</span><span class="op">$</span><span class="va">pressure</span>,method <span class="op">=</span> <span class="st">"kendall"</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] -0.7627645</code></pre>
 <div class="sourceCode" id="cb120"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">cor</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span>,<span class="va">storm</span><span class="op">$</span><span class="va">pressure</span>,method <span class="op">=</span> <span class="st">"spearman"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">cor</a></span><span class="op">(</span><span class="va">storm</span><span class="op">$</span><span class="va">wind</span>,<span class="va">storm</span><span class="op">$</span><span class="va">pressure</span>,method <span class="op">=</span> <span class="st">"spearman"</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] -0.9025831</code></pre>
 <p>Los resultados obtenidos son compatibles con el del coeficiente de Pearson.</p>
 </div>
@@ -1414,7 +1415,7 @@ Figura 2.32: Gráfico de cajas de la velocidad del viento para cada tipo de torm
 <div class="sourceCode" id="cb132"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">storm</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">type</span><span class="op">)</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="co"># Segmentamos por tipo de tormenta</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>cor <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">cor</a></span><span class="op">(</span><span class="va">wind</span>,<span class="va">pressure</span><span class="op">)</span><span class="op">)</span> <span class="co"># Obtenemos coeficientes de correlación</span></code></pre></div>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>cor <span class="op">=</span> <span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">cor</a></span><span class="op">(</span><span class="va">wind</span>,<span class="va">pressure</span><span class="op">)</span><span class="op">)</span> <span class="co"># Obtenemos coeficientes de correlación</span></code></pre></div>
 <pre><code>## # A tibble: 4 × 2
 ##   type                   cor
 ##   &lt;fct&gt;                &lt;dbl&gt;
@@ -1459,7 +1460,7 @@ Figura 2.34: Gráfico de dispersion de presión vs velocidad para cada tipo de t
 <div class="sourceCode" id="cb136"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">tabla_cor</span> <span class="op">&lt;-</span> <span class="va">storm</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year_f</span>,<span class="va">type</span><span class="op">)</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>cor <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">cor</a></span><span class="op">(</span><span class="va">wind</span>,<span class="va">pressure</span><span class="op">)</span><span class="op">)</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>cor <span class="op">=</span> <span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">cor</a></span><span class="op">(</span><span class="va">wind</span>,<span class="va">pressure</span><span class="op">)</span><span class="op">)</span>
 <span class="co"># Visulaizamos la tabla de resultados de forma óptima</span>
 <span class="va">tabla_resumen</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">tabla_cor</span>,<span class="va">year_f</span>,<span class="va">type</span>,<span class="va">cor</span><span class="op">)</span>
 <span class="co"># Arreglamos la tabla para una mejor visualización</span>
@@ -1514,7 +1515,7 @@ Figura 2.36: Gráfico de dispersion de presión vs velocidad para cada tipo de t
 <div class="sourceCode" id="cb140"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">tabla_cor</span> <span class="op">&lt;-</span> <span class="va">storm</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year_f</span>,<span class="va">month_f</span>,<span class="va">type</span><span class="op">)</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>cor <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/mosaic/man/aggregating.html">cor</a></span><span class="op">(</span><span class="va">wind</span>,<span class="va">pressure</span><span class="op">)</span><span class="op">)</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>cor <span class="op">=</span> <span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">cor</a></span><span class="op">(</span><span class="va">wind</span>,<span class="va">pressure</span><span class="op">)</span><span class="op">)</span>
 <span class="co"># Visulaizamos la tabla de resultados de forma óptima</span>
 <span class="va">tabla_resumen</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">tabla_cor</span>,<span class="va">year_f</span>,<span class="va">month_f</span>,<span class="va">type</span>,<span class="va">cor</span><span class="op">)</span>
 <span class="fu"><a href="https://tidyr.tidyverse.org/reference/spread.html">spread</a></span><span class="op">(</span><span class="va">tabla_resumen</span>, key <span class="op">=</span> <span class="va">type</span>, value <span class="op">=</span> <span class="va">cor</span><span class="op">)</span></code></pre></div>
@@ -1615,7 +1616,7 @@ Figura 2.37: Gráfico de dispersion de presión vs velocidad para cada tipo de t
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Modelos Estadísticos</strong>" was written by true, true. It was last built on 2022-03-03.</p>
+    <p>"<strong>Modelos Estadísticos</strong>" was written by true, true. It was last built on 2022-03-25.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

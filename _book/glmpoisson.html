@@ -4,14 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Unidad 13 GLM Poisson | Modelos Estadísticos</title>
+<title>Unidad 14 GLM Poisson | Modelos Estadísticos</title>
 <meta name="description" content="Son frecuentes los datos discretos que provienen de conteos de sucesos que se producen por azar con cierta frecuencia y son modelizables en términos de tasas de incidencia que dependen de ciertas...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Unidad 13 GLM Poisson | Modelos Estadísticos">
+<meta property="og:title" content="Unidad 14 GLM Poisson | Modelos Estadísticos">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Son frecuentes los datos discretos que provienen de conteos de sucesos que se producen por azar con cierta frecuencia y son modelizables en términos de tasas de incidencia que dependen de ciertas...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unidad 13 GLM Poisson | Modelos Estadísticos">
+<meta name="twitter:title" content="Unidad 14 GLM Poisson | Modelos Estadísticos">
 <meta name="twitter:description" content="Son frecuentes los datos discretos que provienen de conteos de sucesos que se producen por azar con cierta frecuencia y son modelizables en términos de tasas de incidencia que dependen de ciertas...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -49,11 +49,12 @@
 <li><a class="" href="anova.html"><span class="header-section-number">8</span> Modelos ANOVA</a></li>
 <li><a class="" href="ancova.html"><span class="header-section-number">9</span> Modelos ANCOVA</a></li>
 <li><a class="" href="smooth.html"><span class="header-section-number">10</span> Modelos aditivos lineales</a></li>
-<li><a class="" href="glm.html"><span class="header-section-number">11</span> Modelos Lineales Generalizados</a></li>
-<li><a class="" href="glmbinomial.html"><span class="header-section-number">12</span> GLM respuesta binomial</a></li>
-<li><a class="active" href="glmpoisson.html"><span class="header-section-number">13</span> GLM Poisson</a></li>
-<li><a class="" href="glmtablascont.html"><span class="header-section-number">14</span> GLM para tablas de contingencia</a></li>
-<li><a class="" href="glmsuperv.html"><span class="header-section-number">15</span> GLM para datos de supervivencia</a></li>
+<li><a class="" href="mmixed.html"><span class="header-section-number">11</span> Modelos Lineales Mixtos</a></li>
+<li><a class="" href="glm.html"><span class="header-section-number">12</span> Modelos Lineales Generalizados</a></li>
+<li><a class="" href="glmbinomial.html"><span class="header-section-number">13</span> GLM respuesta binomial</a></li>
+<li><a class="active" href="glmpoisson.html"><span class="header-section-number">14</span> GLM Poisson</a></li>
+<li><a class="" href="glmtablascont.html"><span class="header-section-number">15</span> GLM para tablas de contingencia</a></li>
+<li><a class="" href="glmsuperv.html"><span class="header-section-number">16</span> GLM para datos de supervivencia</a></li>
 <li><a class="" href="referencias.html">Referencias</a></li>
 </ul>
 
@@ -62,9 +63,9 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="glmpoisson" class="section level1" number="13">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="glmpoisson" class="section level1" number="14">
 <h1>
-<span class="header-section-number">Unidad 13</span> GLM Poisson<a class="anchor" aria-label="anchor" href="#glmpoisson"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Unidad 14</span> GLM Poisson<a class="anchor" aria-label="anchor" href="#glmpoisson"><i class="fas fa-link"></i></a>
 </h1>
 <p>Son frecuentes los datos discretos que provienen de conteos de sucesos que se producen por azar con cierta frecuencia y son modelizables en términos de tasas de incidencia que dependen de ciertas variables predictoras. Para modelizar este tipo de datos se utiliza la distribución de Poisson, <span class="math inline">\(X \sim Po(\mu)\)</span>, donde <span class="math inline">\(\mu\)</span> representa el número medio de ocurrencias, de forma que:</p>
 <p><span class="math display">\[E(X) = \mu \quad \text{ y } \quad  V(X) = \mu.\]</span></p>
@@ -78,14 +79,14 @@ donde <span class="math inline">\(\lambda_i\)</span> representa la tasa de incid
 <li>Cuando la variable categórica viene dada en términos de un intervalo se puede usar el punto medio de dicho intervalo para establecer el código numérico.</li>
 </ul>
 <p>De hecho, en el análisis descriptivo inicial de los datos (sobre todo en los gráficos) esta forma de proceder permite analizar con más detalle la evolución del factor ordinal en la respuesta.</p>
-<div id="bancos-de-datos-4" class="section level2" number="13.1">
+<div id="bancos-de-datos-4" class="section level2" number="14.1">
 <h2>
-<span class="header-section-number">13.1</span> Bancos de datos<a class="anchor" aria-label="anchor" href="#bancos-de-datos-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.1</span> Bancos de datos<a class="anchor" aria-label="anchor" href="#bancos-de-datos-4"><i class="fas fa-link"></i></a>
 </h2>
 <p>A continuación se epresentan los ancos de datos con los que iremos trabajando.</p>
-<div id="telas" class="section level3" number="13.1.1">
+<div id="telas" class="section level3" number="14.1.1">
 <h3>
-<span class="header-section-number">13.1.1</span> Telas<a class="anchor" aria-label="anchor" href="#telas"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.1.1</span> Telas<a class="anchor" aria-label="anchor" href="#telas"><i class="fas fa-link"></i></a>
 </h3>
 <p>Se recogen los resultados de un experimento para determinar el efecto del tipo de lana (A o B) y la tensión (baja, media o alta) en el número de roturas de deformación en la fabricación de telas. Se recopilaron datos de nueve telares para cada combinación de configuraciones. Las variables consideradas son:</p>
 <ul>
@@ -100,7 +101,7 @@ donde <span class="math inline">\(\lambda_i\)</span> representa la tasa de incid
 <p>La pregunta de interés es si resulta posible predecir el número de roturas en función del tipo de lana y de la tensión.</p>
 <p>En este caso la exposición a riesgo es constante (<span class="math inline">\(n_i =1\)</span>) de forma que <span class="math inline">\(log(n_i) = 0\)</span> desapareciendo de la especificación del modelo. Por tanto, se considera que las posibles predictoras influyen directamente sobre <span class="math inline">\(\mu_i = breaks_i\)</span>.</p>
 <p>En primer lugar cargamos los datos de la librería <code>datasets</code></p>
-<div class="sourceCode" id="cb665"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb756"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">roturas</span> <span class="op">&lt;-</span> <span class="va">warpbreaks</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">roturas</span><span class="op">)</span></code></pre></div>
 <pre><code>## 'data.frame':    54 obs. of  3 variables:
@@ -108,7 +109,7 @@ donde <span class="math inline">\(\lambda_i\)</span> representa la tasa de incid
 ##  $ wool   : Factor w/ 2 levels "A","B": 1 1 1 1 1 1 1 1 1 1 ...
 ##  $ tension: Factor w/ 3 levels "L","M","H": 1 1 1 1 1 1 1 1 1 2 ...</code></pre>
 <p>Para la representación gráfica y análisis de este banco de datos introducimos una variable codificada para el factor ordinal <code>tension</code> mediante un código continuo:</p>
-<div class="sourceCode" id="cb667"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb758"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Creamos código asociado a cada nivel del factor y la variable asociada</span>
 <span class="va">roturas</span> <span class="op">&lt;-</span> <span class="va">roturas</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>t1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">tension</span> <span class="op">==</span> <span class="st">"L"</span>, <span class="fl">1</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
@@ -118,22 +119,22 @@ donde <span class="math inline">\(\lambda_i\)</span> representa la tasa de incid
 <span class="co"># Nos quedamos con las variables de interés</span>
 <span class="va">roturas</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">roturas</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"breaks"</span>, <span class="st">"wool"</span>, <span class="st">"tension"</span>, <span class="st">"tension.num"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>Representamos la incidencia (en este caso <span class="math inline">\(n_i = 1\)</span>) que corresponde con la variable <code>breaks</code>, es decir, representamos el logaritmo de la incidencia con respecto a las predictoras, para valorar la linealidad del efecto.</p>
-<div class="sourceCode" id="cb668"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb759"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Utilizamos las dos variables categóricas</span>
 <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">roturas</span>,<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">tension</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">breaks</span><span class="op">)</span>, color <span class="op">=</span> <span class="va">wool</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="13-GLMPoisson_files/figure-html/pois003-1.png" width="95%" style="display: block; margin: auto;"></div>
 <p>En el gráfico se aprecia cierta tendencia con la tensión, pero no tanto con el tipo de lana. Realizamos el gráfico de interacción con las medias para las combinaciones de ambos factores.</p>
-<div class="sourceCode" id="cb669"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb760"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">roturas</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">tension</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">breaks</span><span class="op">)</span>, group <span class="op">=</span> <span class="va">wool</span>, color <span class="op">=</span> <span class="va">wool</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/stat_summary.html">stat_summary</a></span><span class="op">(</span>fun <span class="op">=</span> <span class="va">mean</span>, geom <span class="op">=</span> <span class="st">"point"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/stat_summary.html">stat_summary</a></span><span class="op">(</span>fun <span class="op">=</span> <span class="va">mean</span>, geom <span class="op">=</span> <span class="st">"line"</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="13-GLMPoisson_files/figure-html/pois004-1.png" width="95%" style="display: block; margin: auto;"></div>
 <p>Se puede ver un efecto conjunto entre <code>tension</code> y <code>wool</code>. Parece bastante claro que deberemos considerar un efecto de interacción para este modelo. De hecho, se aprecian curvas descendientes con <code>tension</code> (indicando que las telas sufren menos roturas a mayor tensión) no apreciándose efecto lineal lo que puede provocar que no se verifiquen las hipótesis del modelo, y que sea necesario introducir ciertas tendencias en las variables predictoras. En el tipo de lana resulta imposible hacer esto porque es una variable categórica nominal, pero si podríamos hacerlo con <code>tension</code> si consideramos la variable numérica construida a partir de ella.</p>
 </div>
-<div id="barcos" class="section level3" number="13.1.2">
+<div id="barcos" class="section level3" number="14.1.2">
 <h3>
-<span class="header-section-number">13.1.2</span> Barcos<a class="anchor" aria-label="anchor" href="#barcos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.1.2</span> Barcos<a class="anchor" aria-label="anchor" href="#barcos"><i class="fas fa-link"></i></a>
 </h3>
 <p>En este banco de datos se analizan lo datos proporcionados por la aseguradora Lloyd’s con respecto al número de incidentes causados por las olas en cierto componente de los buques cargueros. El banco de datos contiene información sobre:</p>
 <ul>
@@ -152,18 +153,18 @@ donde <span class="math inline">\(\lambda_i\)</span> representa la tasa de incid
 <p>La pregunta de interés es si resulta posible predecir el número de incidentes en función de las predictoras consideradas.</p>
 <p>En este caso la exposición a riesgo no es constante, ya que cuanto mayor sea el tiempo de servicio de un barco parece más probable que sufra un incidente. En este caso <span class="math inline">\(n_i = service_i\)</span> de forma que <span class="math inline">\(log(n_i) = log(service_i)\)</span> remarcando el hecho de que el riesgo aumenta cuando lo hace el tiempo de servicio. El offset no se puede estimar ya que es fijo, y modelizamos la tasa de riesgo <span class="math inline">\(\lambda_i\)</span> con la información de las variables predictoras. En la práctica dicha tasa debe aproximarse a <span class="math inline">\(\lambda_i = incidents_i/service_i\)</span>, por lo que representamos dicha variable con respecto a las predictoras para el planteamiento del modelo.</p>
 <p>Comenzamos con la lectura del banco de datos creando factores a partir de los códigos numéricos de las variables <code>year</code> y <code>period</code>.</p>
-<div class="sourceCode" id="cb670"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb761"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">barcos</span> <span class="op">&lt;-</span> <span class="va">ships</span>
 <span class="co"># Generamos factores a partir de los códigos numéricos</span>
 <span class="va">barcos</span><span class="op">$</span><span class="va">year.f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">barcos</span><span class="op">$</span><span class="va">year</span><span class="op">)</span>
 <span class="va">barcos</span><span class="op">$</span><span class="va">period.f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">barcos</span><span class="op">$</span><span class="va">period</span><span class="op">)</span></code></pre></div>
 <p>Un análisis descriptivo inicial del banco de datos muestra que hay barcos que tienen 0 meses de servicio. Estos barcos deben ser eliminados del análisis, ya que al tratar de ajustar la tasa de incidentes dividiríamos por un valor de 0, lo que provocaría la imposibilidad de un ajuste adecuado. Seleccionamos todos los barcos con tiempo de servicio mayor que cero y obtenemos la tasa de incidencia a partir de la relación entre el número de incidentes y las horas de servicio de cada barco.</p>
-<div class="sourceCode" id="cb671"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb762"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">barcos</span> <span class="op">&lt;-</span> <span class="va">barcos</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">service</span><span class="op">&gt;</span><span class="fl">0</span><span class="op">)</span> <span class="op"><a href="https://stringr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>tasa <span class="op">=</span> <span class="va">incidents</span><span class="op">/</span><span class="va">service</span><span class="op">)</span></code></pre></div>
 <p>Realizamos el gráfico de la media del logaritmo de la tasa para <code>type</code>, <code>year</code> y <code>period</code>. En realidad trabajamos con los factores para representar adecuadamente el gráfico de interacción.</p>
-<div class="sourceCode" id="cb672"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb763"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">barcos</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year.f</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">tasa</span><span class="op">)</span>, group <span class="op">=</span> <span class="va">period.f</span>, color <span class="op">=</span> <span class="va">period.f</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/stat_summary.html">stat_summary</a></span><span class="op">(</span>fun <span class="op">=</span> <span class="va">mean</span>, geom <span class="op">=</span> <span class="st">"point"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/stat_summary.html">stat_summary</a></span><span class="op">(</span>fun <span class="op">=</span> <span class="va">mean</span>, geom <span class="op">=</span> <span class="st">"line"</span><span class="op">)</span> <span class="op">+</span>
@@ -171,7 +172,7 @@ donde <span class="math inline">\(\lambda_i\)</span> representa la tasa de incid
 <div class="inline-figure"><img src="13-GLMPoisson_files/figure-html/pois007-1.png" width="95%" style="display: block; margin: auto;"></div>
 <p>Se observa que los tipos de barco se comportan de forma diferente en cuanto a la tasa de incidentes. Los barcos del tipo “E” son los que tienen tasas más altas. En cuanto al año de fabricación y el periodo de funcionamiento varían con el tipo de barco. Mientras que para los tipos “A” y “B” se observan comportamientos muy similares no ocurre los mismo para el tipo “C”. De nuevo habrá que vigilar el efecto para asegurar la linealidad del predictor lineal asociado al GLM considerado.</p>
 <p>En este caso nos podemos plantear un modelo con tres predictoras de tipo factor y considerar sus posibles interacciones (lo que nos da un modelo bastante complejo), u optar por un modelo más sencillo donde consideramos <code>year</code> y <code>period</code> como numéricas. Obtenemos la tabla cruzada de ambos factores para ver si hay alguna combinación que no se da, y por tanto desechar el modelo de interacción al que darían lugar.</p>
-<div class="sourceCode" id="cb673"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb764"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">barcos</span><span class="op">$</span><span class="va">year.f</span>, <span class="va">barcos</span><span class="op">$</span><span class="va">period.f</span><span class="op">)</span></code></pre></div>
 <pre><code>##     
 ##      60 75
@@ -182,9 +183,9 @@ donde <span class="math inline">\(\lambda_i\)</span> representa la tasa de incid
 <p>Se observa que la combinación <code>year_f = 75</code> y <code>period_f = 60</code> no tiene ningún dato. Si consideráramos un modelo con dicha interacción resultaría imposible obtener la estimación de dicho modelo. Para evitar ese problema, y dado el carácter ordinal de los factores, consideramos sus versiones numéricas para la estimación del modelo correspondiente.</p>
 </div>
 </div>
-<div id="modelo-teórico-1" class="section level2" number="13.2">
+<div id="modelo-teórico-1" class="section level2" number="14.2">
 <h2>
-<span class="header-section-number">13.2</span> Modelo Teórico<a class="anchor" aria-label="anchor" href="#modelo-te%C3%B3rico-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.2</span> Modelo Teórico<a class="anchor" aria-label="anchor" href="#modelo-te%C3%B3rico-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>El modelo lineal generalizado para variables aleatorias Poisson o más conocido como regresión de Poisson se puede especificar siguiendo la definición establecida en el punto anterior como:</p>
 <ul>
@@ -208,38 +209,38 @@ donde cada <span class="math inline">\(\beta\)</span> representa el efecto de la
 <p><span class="math display">\[RR(X_{AB}) = \frac{\lambda(X = B)}{\lambda(X = A)} = exp(\text{coeficiente asociado a B} - \text{coeficiente asociado a A})\]</span></p>
 <p>En ambos casos, el riesgo relativo aumenta cuando <span class="math inline">\(RR &gt; 1\)</span> y disminuye cuando <span class="math inline">\(RR &lt; 1\)</span>. Tenemos el mismo riesgo cuando <span class="math inline">\(RR = 1\)</span>. De esta forma tenemos un indicador de cuanto aumenta la respuesta en función de las predictoras consideradas.</p>
 </div>
-<div id="estimación-y-bondad-de-ajuste-del-modelo-1" class="section level2" number="13.3">
+<div id="estimación-y-bondad-de-ajuste-del-modelo-1" class="section level2" number="14.3">
 <h2>
-<span class="header-section-number">13.3</span> Estimación y bondad de ajuste del modelo<a class="anchor" aria-label="anchor" href="#estimaci%C3%B3n-y-bondad-de-ajuste-del-modelo-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.3</span> Estimación y bondad de ajuste del modelo<a class="anchor" aria-label="anchor" href="#estimaci%C3%B3n-y-bondad-de-ajuste-del-modelo-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>Como hemos hecho hasta ahora, en un primer momento estimamos el modelo más complejo posible para proceder posteriormente con la selección de aquellos efectos que de verdad resultan significativos. Para la estimación utilizamos la función <code>glm</code> con las especificaciones siguientes:</p>
-<div class="sourceCode" id="cb675"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb766"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">modelo</span>,family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">poisson</a></span><span class="op">(</span><span class="op">)</span>, offset <span class="op">=</span> <span class="va">value</span>, <span class="va">data_set</span><span class="op">)</span></code></pre></div>
 <p>La diferencia principal con los modelos de regresión logística es la introducción de los offsets en el ajuste del modelo. Si no disponemos de offsets no se especificarán en el ajuste del modelo.</p>
 <p>Para el estudio de bondad de ajuste utilizamos el test <span class="math inline">\(\chi^2\)</span> basado en la deviance del modelo. En este caso dejamos los calculo para el lector. También podemos saber la capacidad explicativa (<code>explained deviance</code>) del modelo que se puede obtener con la función <code>summary(m)</code> donde <code>m</code> es el modelo que deseamos estudiar.</p>
-<div id="ejemplos-17" class="section level3" number="13.3.1">
+<div id="ejemplos-18" class="section level3" number="14.3.1">
 <h3>
-<span class="header-section-number">13.3.1</span> Ejemplos<a class="anchor" aria-label="anchor" href="#ejemplos-17"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.3.1</span> Ejemplos<a class="anchor" aria-label="anchor" href="#ejemplos-18"><i class="fas fa-link"></i></a>
 </h3>
 <p>Procedemos con el análisis de cada uno de los ejemplos.</p>
-<div id="telas-1" class="section level4" number="13.3.1.1">
+<div id="telas-1" class="section level4" number="14.3.1.1">
 <h4>
-<span class="header-section-number">13.3.1.1</span> Telas<a class="anchor" aria-label="anchor" href="#telas-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.3.1.1</span> Telas<a class="anchor" aria-label="anchor" href="#telas-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>Para este banco de datos ajustamos dos modelos completos considerando la tensión como factor (<code>tension</code>) o como variable numérica (<code>tension.num</code>).</p>
-<div id="modelo-con-tension" class="section level5" number="13.3.1.1.1">
+<div id="modelo-con-tension" class="section level5" number="14.3.1.1.1">
 <h5>
-<span class="header-section-number">13.3.1.1.1</span> Modelo con tension<a class="anchor" aria-label="anchor" href="#modelo-con-tension"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.3.1.1.1</span> Modelo con tension<a class="anchor" aria-label="anchor" href="#modelo-con-tension"><i class="fas fa-link"></i></a>
 </h5>
 <p>Para este banco de datos ajustamos dos modelos completos considerando la tensión como factor o como variable numérica. Comenzamos con el modelo considerando todas las predictoras como factores. Consideramos tanto los efectos asociados a cada factor como la posible interacción entre ellos. En este caso no hay offsets. El modelo propuesto es:</p>
 <p><span class="math display">\[breaks \sim wool*tension\]</span></p>
 <p>que se puede ajustar mediante</p>
-<div class="sourceCode" id="cb676"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb767"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">fit.telas.cat</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">breaks</span> <span class="op">~</span> <span class="va">wool</span><span class="op">*</span><span class="va">tension</span>,
                     family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">poisson</a></span><span class="op">(</span><span class="op">)</span>, 
                     data <span class="op">=</span> <span class="va">roturas</span><span class="op">)</span></code></pre></div>
 <p>Al igual que ocurría con los modelos de regresión logística hacemos uso de la función <code>tab_model</code> para obtener las estimaciones del predictor lineal y de la tasa de incidencia. Analizamos en primer lugar el predictor lineal.</p>
-<div class="sourceCode" id="cb677"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb768"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://strengejacke.github.io/sjPlot/reference/tab_model.html">tab_model</a></span><span class="op">(</span><span class="va">fit.telas.cat</span>, 
           transform <span class="op">=</span> <span class="cn">NULL</span>, 
           show.r2 <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
@@ -370,7 +371,7 @@ log(breaks)_{woolB;tensionH} &amp; = 3.80 - 0.46 - 0.60 + 0.19 = 2.93 \\
 \end{array}\right.\]</span></p>
 <p>El proceso de estimación nos proporciona que el mayor número de roturas se produce para la combinación <code>wool = A</code> y <code>tension = L</code>, mientras que el menor número se estima para la combinación <code>wool = B</code> y <code>tension = H</code>.</p>
 <p>Obtenemos ahora las tasas de incidencia de rotura asociados con este modelo:</p>
-<div class="sourceCode" id="cb678"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb769"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://strengejacke.github.io/sjPlot/reference/tab_model.html">tab_model</a></span><span class="op">(</span><span class="va">fit.telas.cat</span>, 
           show.r2 <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
 <div class="inline-table"><table style="border-collapse:collapse; border:none;" class="table table-sm">
@@ -504,14 +505,14 @@ RR_{(A-L; A-H)} = \frac{44.56}{24.51} = 1.81
 \]</span></p>
 <p>Se concluye que el riesgo de rotura de la combinación <code>{woolA;tensionL}</code> es casi el doble que el de la combinación <code>{woolA;tensionH}</code>.</p>
 </div>
-<div id="modelo-con-tension.num" class="section level5" number="13.3.1.1.2">
+<div id="modelo-con-tension.num" class="section level5" number="14.3.1.1.2">
 <h5>
-<span class="header-section-number">13.3.1.1.2</span> Modelo con tension.num<a class="anchor" aria-label="anchor" href="#modelo-con-tension.num"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.3.1.1.2</span> Modelo con tension.num<a class="anchor" aria-label="anchor" href="#modelo-con-tension.num"><i class="fas fa-link"></i></a>
 </h5>
 <p>Ajustamos ahora el modelo asumiendo la variable <code>tensión</code> con su código numérico (para valorar el efecto ordinal del factor). El modelo propuesto es:</p>
 <p><span class="math display">\[breaks \sim wool*tension.num\]</span></p>
 <p>Ajustamos el modelo y estudíamos las ecuaciones de estimación obtenidas</p>
-<div class="sourceCode" id="cb679"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb770"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">fit.telas.num</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">breaks</span> <span class="op">~</span> <span class="va">wool</span><span class="op">*</span><span class="va">tension.num</span>,
                 family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">poisson</a></span><span class="op">(</span><span class="op">)</span>, 
                 data <span class="op">=</span> <span class="va">roturas</span><span class="op">)</span>
@@ -613,7 +614,7 @@ log(breaks_{woolB}) &amp; = 3.60 - 0.19*tension.num\\
 \end{array}\right.\]</span></p>
 <p>Dado que los coeficientes asociados a <code>tension.num</code> son negativos, el efecto de la tensión es menos relevante para <code>wool = A</code> que para <code>wool = B</code>, de forma que el nivel de roturas disminuye al aumentar la tensión.</p>
 <p>Obtenemos las incidencias asociadas con el modelo</p>
-<div class="sourceCode" id="cb680"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb771"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://strengejacke.github.io/sjPlot/reference/tab_model.html">tab_model</a></span><span class="op">(</span><span class="va">fit.telas.num</span>, 
           show.r2 <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>                </code></pre></div>
 <div class="inline-table"><table style="border-collapse:collapse; border:none;" class="table table-sm">
@@ -718,14 +719,14 @@ RR_{(A;B)} = \frac{57.72*0.72^{tension.num}}{36.36*0.83^{tension.num}} = 1.59*0.
 <p>En el apartado de selección del modelo valoraremos los dos modelos construidos para determinar cual de ellos es mejor.</p>
 </div>
 </div>
-<div id="barcos-1" class="section level4" number="13.3.1.2">
+<div id="barcos-1" class="section level4" number="14.3.1.2">
 <h4>
-<span class="header-section-number">13.3.1.2</span> Barcos<a class="anchor" aria-label="anchor" href="#barcos-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.3.1.2</span> Barcos<a class="anchor" aria-label="anchor" href="#barcos-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>Ajustamos el modelo utilizando las variables con los códigos numéricos en lugar de los factores. En este caso si disponemos de offset y el modelo planteado viene dado por:</p>
 <p><span class="math display">\[incidents \sim offset(service) + type *(year + period)\]</span>
 En realidad la estimación de este modelo nos proporciona las tasas de incidentes <span class="math inline">\(\lambda_i = incidents_i/service_i\)</span>. Realizamos el ajuste del modelo a partir del cual podemos obtener las ecuaciones de estimación por los diferentes niveles de <code>type</code>:</p>
-<div class="sourceCode" id="cb681"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb772"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">fit.barcos.num</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">incidents</span> <span class="op">~</span> <span class="va">type</span> <span class="op">*</span><span class="op">(</span><span class="va">year</span> <span class="op">+</span> <span class="va">period</span><span class="op">)</span>,
                  family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">poisson</a></span><span class="op">(</span><span class="op">)</span>, 
                  offset <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">service</span><span class="op">)</span>, 
@@ -987,23 +988,23 @@ log(\lambda_{typeE}) &amp; =  4.16   - 0.16*year + 0.03*period \\
 </div>
 </div>
 </div>
-<div id="selección-del-modelo-1" class="section level2" number="13.4">
+<div id="selección-del-modelo-1" class="section level2" number="14.4">
 <h2>
-<span class="header-section-number">13.4</span> Selección del modelo<a class="anchor" aria-label="anchor" href="#selecci%C3%B3n-del-modelo-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.4</span> Selección del modelo<a class="anchor" aria-label="anchor" href="#selecci%C3%B3n-del-modelo-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>Para la construcción del mejor modelo utilizaremos los mismos procedimientos que presentamos en la unidad anterior basados en los procedimientos secuenciales con el estadístico <code>AIC</code>.</p>
-<div id="ejemplos-18" class="section level3" number="13.4.1">
+<div id="ejemplos-19" class="section level3" number="14.4.1">
 <h3>
-<span class="header-section-number">13.4.1</span> Ejemplos<a class="anchor" aria-label="anchor" href="#ejemplos-18"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.4.1</span> Ejemplos<a class="anchor" aria-label="anchor" href="#ejemplos-19"><i class="fas fa-link"></i></a>
 </h3>
 <p>Estudiamos a continuación cada uno de los ejemplos.</p>
-<div id="datos-de-telas" class="section level4" number="13.4.1.1">
+<div id="datos-de-telas" class="section level4" number="14.4.1.1">
 <h4>
-<span class="header-section-number">13.4.1.1</span> Datos de telas<a class="anchor" aria-label="anchor" href="#datos-de-telas"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.4.1.1</span> Datos de telas<a class="anchor" aria-label="anchor" href="#datos-de-telas"><i class="fas fa-link"></i></a>
 </h4>
 <p>En este caso realizamos la selección tanto en el modelo con la variable tensión como factor y como numérica, y elegimos como mejor modelo el que tenga un menor valor de <code>AIC</code>.</p>
 <p>Comenzamos con la selección del modelo con factor</p>
-<div class="sourceCode" id="cb682"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb773"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Selección del modelo</span>
 <span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/step.html">step</a></span><span class="op">(</span><span class="va">fit.telas.cat</span><span class="op">)</span></code></pre></div>
 <pre><code>## Start:  AIC=468.97
@@ -1023,7 +1024,7 @@ log(\lambda_{typeE}) &amp; =  4.16   - 0.16*year + 0.03*period \\
 ## Null Deviance:       297.4 
 ## Residual Deviance: 182.3     AIC: 469</code></pre>
 <p>No se elimina ningún efecto del modelo y el <code>AIC</code> correspondiente es de 468.97. Procedemos ahora con el modelo con tensión como variable numérica.</p>
-<div class="sourceCode" id="cb685"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb776"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Selección del modelo</span>
 <span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/step.html">step</a></span><span class="op">(</span><span class="va">fit.telas.num</span><span class="op">)</span></code></pre></div>
 <pre><code>## Start:  AIC=489.55
@@ -1073,12 +1074,12 @@ RR\left(\frac{wool A; tension M}{wool A; tension L}\right) = 24.06/44.56 = 0.54\
 \end{array}\right.\]</span></p>
 <p>Mientras que el riesgo de sufrir una rotura para <code>wool = A</code> es prácticamente el mismo para los valores <code>H</code> y <code>M</code> de <code>tensión</code>, este se duplica cuando comparamos los valores <code>M</code> y <code>L</code>. ¿Qué podemos decir si utilizamos <code>wool = B</code>?</p>
 </div>
-<div id="datos-de-barcos" class="section level4" number="13.4.1.2">
+<div id="datos-de-barcos" class="section level4" number="14.4.1.2">
 <h4>
-<span class="header-section-number">13.4.1.2</span> Datos de barcos<a class="anchor" aria-label="anchor" href="#datos-de-barcos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.4.1.2</span> Datos de barcos<a class="anchor" aria-label="anchor" href="#datos-de-barcos"><i class="fas fa-link"></i></a>
 </h4>
 <p>Comenzamos con la selección del modelo</p>
-<div class="sourceCode" id="cb688"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb779"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Selección del modelo</span>
 <span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/step.html">step</a></span><span class="op">(</span><span class="va">fit.barcos.num</span><span class="op">)</span></code></pre></div>
 <pre><code>## Start:  AIC=167
@@ -1110,13 +1111,13 @@ RR\left(\frac{wool A; tension M}{wool A; tension L}\right) = 24.06/44.56 = 0.54\
 ## Null Deviance:       146.3 
 ## Residual Deviance: 45.14     AIC: 165</code></pre>
 <p>El proceso de selección elimina únicamente la interacción entre tipo y periodo, de forma que el modelo final viene dado por:</p>
-<div class="sourceCode" id="cb691"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb782"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">fit.barcos.num</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">incidents</span> <span class="op">~</span> <span class="va">type</span> <span class="op">+</span> <span class="va">year</span> <span class="op">+</span> <span class="va">period</span> <span class="op">+</span> <span class="va">type</span><span class="op">:</span><span class="va">year</span>,
                  family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">poisson</a></span><span class="op">(</span><span class="op">)</span>, 
                  offset <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">service</span><span class="op">)</span>, 
                  data <span class="op">=</span> <span class="va">barcos</span><span class="op">)</span></code></pre></div>
 <p>Las estimaciones del predictor lineal vienen dadas por:</p>
-<div class="sourceCode" id="cb692"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb783"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://strengejacke.github.io/sjPlot/reference/tab_model.html">tab_model</a></span><span class="op">(</span><span class="va">fit.barcos.num</span>, 
           transform <span class="op">=</span> <span class="cn">NULL</span>, 
           show.r2 <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>   </code></pre></div>
@@ -1320,7 +1321,7 @@ log(\lambda_{typeE}) &amp; =  4.21   - 0.16*year + 0.02*period \\
 RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*period)}{exp(4.21 - 0.16*year + 0.02*period)} = exp(-18.42 + 0.27*year)
 \]</span></p>
 <p>que podemos representar gráficamente:</p>
-<div class="sourceCode" id="cb693"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb784"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Asignamos valores al año</span>
 <span class="va">secyear</span> <span class="op">&lt;-</span> <span class="fl">60</span><span class="op">:</span><span class="fl">75</span>
 <span class="co"># Calculamos el riesgo entre C y E como el cociente de tasas estimadas</span>
@@ -1337,9 +1338,9 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 </div>
 </div>
 </div>
-<div id="diagnóstico-4" class="section level2" number="13.5">
+<div id="diagnóstico-5" class="section level2" number="14.5">
 <h2>
-<span class="header-section-number">13.5</span> Diagnóstico<a class="anchor" aria-label="anchor" href="#diagn%C3%B3stico-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.5</span> Diagnóstico<a class="anchor" aria-label="anchor" href="#diagn%C3%B3stico-5"><i class="fas fa-link"></i></a>
 </h2>
 <p>Las herramientas de diagnóstico para este tipo de modelos son las mismas que el caso de los GLM con respuesta binaria. Los gráficos que vamos a utilizar son:</p>
 <ul>
@@ -1347,22 +1348,22 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 <li>Residuos vs variables en el modelo (predictor lineal)</li>
 <li>Valores influyentes</li>
 </ul>
-<div id="ejemplos-19" class="section level3" number="13.5.1">
+<div id="ejemplos-20" class="section level3" number="14.5.1">
 <h3>
-<span class="header-section-number">13.5.1</span> Ejemplos<a class="anchor" aria-label="anchor" href="#ejemplos-19"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.5.1</span> Ejemplos<a class="anchor" aria-label="anchor" href="#ejemplos-20"><i class="fas fa-link"></i></a>
 </h3>
 <p>Procedemos con el diagnóstico de los modelos obtenidos hasta el momento. En caso de encontrar problemas con alguno de ellos, procederemos como en casos anteriores.</p>
-<div id="datos-de-telas-1" class="section level4" number="13.5.1.1">
+<div id="datos-de-telas-1" class="section level4" number="14.5.1.1">
 <h4>
-<span class="header-section-number">13.5.1.1</span> Datos de telas<a class="anchor" aria-label="anchor" href="#datos-de-telas-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.5.1.1</span> Datos de telas<a class="anchor" aria-label="anchor" href="#datos-de-telas-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>Obtenemos las cantidades de interés y realizamos los gráficos correspondientes.</p>
 <p>Obtenemos todas las cantidades de interés del modelo</p>
-<div class="sourceCode" id="cb694"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb785"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Obtención de valores para el diagnóstico</span>
 <span class="va">diagnostico</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/fortify.html">fortify</a></span><span class="op">(</span><span class="va">fit.telas.cat</span><span class="op">)</span></code></pre></div>
 <p>Realizamos el gráfico de residuos versus ajustados:</p>
-<div class="sourceCode" id="cb695"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb786"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">#Gráfico de residuos vs ajustados (predictor lineal)</span>
 <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diagnostico</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">.fitted</span>, y <span class="op">=</span> <span class="va">.stdresid</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> 
@@ -1371,7 +1372,7 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 <div class="inline-figure"><img src="13-GLMPoisson_files/figure-html/pois023-1.png" width="95%" style="display: block; margin: auto;"></div>
 <p>Dado que las dos predictoras son factores el gráfico que aparece es bastante natural ya que solo resulta predecir cuatro valores posibles, que corresponden con las cuatro combinaciones de los dos factores. No se aprecian comportamientos extraño en cuanto a la tendencia o la homocedasticidad.</p>
 <p>Realizamos ahora los gráficos versus predictoras.</p>
-<div class="sourceCode" id="cb696"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb787"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Gráficos de residuos vs predictoras (preditor lineal)</span>
 <span class="fu"><a href="https://strengejacke.github.io/sjPlot/reference/plot_model.html">plot_model</a></span><span class="op">(</span><span class="va">fit.telas.cat</span>, type <span class="op">=</span> <span class="st">"resid"</span>,
            show.data <span class="op">=</span> <span class="cn">TRUE</span>,
@@ -1380,16 +1381,16 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 <div class="inline-figure"><img src="13-GLMPoisson_files/figure-html/pois024-1.png" width="95%" style="display: block; margin: auto;"></div>
 <p>No se aprecian comportamientos que hagan dudar del incumplimiento de las hipótesis. El modelo obtenido es adecuado y puede ser usado para predecir el número de roturas debido a los factores considerados.</p>
 </div>
-<div id="datos-de-barcos-1" class="section level4" number="13.5.1.2">
+<div id="datos-de-barcos-1" class="section level4" number="14.5.1.2">
 <h4>
-<span class="header-section-number">13.5.1.2</span> Datos de barcos<a class="anchor" aria-label="anchor" href="#datos-de-barcos-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.5.1.2</span> Datos de barcos<a class="anchor" aria-label="anchor" href="#datos-de-barcos-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>Obtenemos las cantidades de interés y realizamos los gráficos correspondientes.</p>
-<div class="sourceCode" id="cb697"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb788"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Obtención de valores para el diagnóstico</span>
 <span class="va">diagnostico</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/fortify.html">fortify</a></span><span class="op">(</span><span class="va">fit.barcos.num</span><span class="op">)</span></code></pre></div>
 <p>Realizamos el gráfico de residuos versus ajustados:</p>
-<div class="sourceCode" id="cb698"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb789"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">#Gráfico de residuos vs ajustados (predictor lineal)</span>
 <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diagnostico</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">.fitted</span>, y <span class="op">=</span> <span class="va">.stdresid</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> 
@@ -1397,7 +1398,7 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Ajustados"</span>, y <span class="op">=</span> <span class="st">"Residuos"</span><span class="op">)</span></code></pre></div>
 <div class="inline-figure"><img src="13-GLMPoisson_files/figure-html/pois026-1.png" width="95%" style="display: block; margin: auto;"></div>
 <p>Los residuos se reparten aleatoriamente pero parece apreciarse cierto efecto de embudo con los valores ajustados. Realizamos los gráficos con respecto a las predictoras:</p>
-<div class="sourceCode" id="cb699"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb790"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Gráficos de residuos vs predictoras (preditor lineal)</span>
 <span class="fu"><a href="https://strengejacke.github.io/sjPlot/reference/plot_model.html">plot_model</a></span><span class="op">(</span><span class="va">fit.barcos.num</span>, type <span class="op">=</span> <span class="st">"resid"</span>,
            show.data <span class="op">=</span> <span class="cn">TRUE</span>,
@@ -1406,7 +1407,7 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 <div class="inline-figure"><img src="13-GLMPoisson_files/figure-html/pois027-1.png" width="95%" style="display: block; margin: auto;"></div>
 <p>Mientras que respecto de <code>period</code> y <code>type</code> no se aprecia ningún problema, si existe cierta tendencia con respecto a <code>year</code>. Se podría optar por un modelo polinómico o plantear directamente un suavizado con es variable. Se propone utiliza el modelo de suavizado, pero dado que tenemos pocos datos para tipo de barco, rebajamos el valor del número de nodos a 5 para conseguir el ajuste.</p>
 <p>Consideramos un modelo con interacción <code>type:period</code> y otro sin interacción para valorar cual de ellos se comporta mejor mediante el estadístico <code>AIC</code>:</p>
-<div class="sourceCode" id="cb700"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb791"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Modelo con interacción type:period</span>
 <span class="va">M1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/gam.html">gam</a></span><span class="op">(</span><span class="va">incidents</span> <span class="op">~</span> <span class="va">type</span> <span class="op">+</span> <span class="va">period</span> <span class="op">+</span> 
             <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html">s</a></span><span class="op">(</span><span class="va">year</span>, k <span class="op">=</span> <span class="fl">5</span>, m <span class="op">=</span> <span class="fl">2</span>, bs <span class="op">=</span> <span class="st">"ps"</span>, by <span class="op">=</span> <span class="va">type</span><span class="op">)</span> <span class="op">+</span> 
@@ -1426,7 +1427,7 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 ## M1 16.98855 145.4310
 ## M2 13.00991 143.3748</code></pre>
 <p>El modelo seleccionado es el que no tiene la interacción. Empezamos el diagnóstico de dicho modelo asignando el modelo obtenido y realizamos el diagnóstico.</p>
-<div class="sourceCode" id="cb702"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb793"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Asignamos el modelo </span>
 <span class="va">fit.barcos.num</span> <span class="op">&lt;-</span> <span class="va">M2</span>
 <span class="co"># Gráficos de diagnóstico</span>
@@ -1454,22 +1455,22 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 </div>
 </div>
 </div>
-<div id="predicción-5" class="section level2" number="13.6">
+<div id="predicción-5" class="section level2" number="14.6">
 <h2>
-<span class="header-section-number">13.6</span> Predicción<a class="anchor" aria-label="anchor" href="#predicci%C3%B3n-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.6</span> Predicción<a class="anchor" aria-label="anchor" href="#predicci%C3%B3n-5"><i class="fas fa-link"></i></a>
 </h2>
 <p>A continuación se presentan los resultados de predicción para los bancos de datos que hemos venido trabajando. Antes de proceder con la predicción para este tipo de modelos es necesario realizar la siguiente anotación. La inclusión de offset altera en cierta forma el proceso de predicción. En esta situación solo es posible predecir las tasas asociadas al modelo propuesto y no la predicción de la variable original. Podemos obtener el valor estimado en la escala de la variable original sin más que multiplicar las tasas predichas por un valor del offset prefijado.</p>
-<div id="bancos-de-datos-5" class="section level3" number="13.6.1">
+<div id="bancos-de-datos-5" class="section level3" number="14.6.1">
 <h3>
-<span class="header-section-number">13.6.1</span> Bancos de datos<a class="anchor" aria-label="anchor" href="#bancos-de-datos-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.6.1</span> Bancos de datos<a class="anchor" aria-label="anchor" href="#bancos-de-datos-5"><i class="fas fa-link"></i></a>
 </h3>
 <p>Detallamos el procedimiento de predicción en cada ejemplo.</p>
-<div id="datos-de-telas-2" class="section level4" number="13.6.1.1">
+<div id="datos-de-telas-2" class="section level4" number="14.6.1.1">
 <h4>
-<span class="header-section-number">13.6.1.1</span> Datos de telas<a class="anchor" aria-label="anchor" href="#datos-de-telas-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.6.1.1</span> Datos de telas<a class="anchor" aria-label="anchor" href="#datos-de-telas-2"><i class="fas fa-link"></i></a>
 </h4>
 <p>En este caso no tenemos offset y podemos realizar la predicción sin problemas. Obtenemos tanto el gráfico como la tabla de predicción.</p>
-<div class="sourceCode" id="cb704"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb795"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Obtenemos el objeto de predicción</span>
 <span class="va">gpred</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://strengejacke.github.io/sjPlot/reference/plot_model.html">plot_model</a></span><span class="op">(</span><span class="va">fit.telas.cat</span>,<span class="st">"pred"</span>,
                     terms<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"wool"</span>,<span class="st">"tension"</span><span class="op">)</span>,
@@ -1498,17 +1499,17 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 ## ---------------------------------------------
 ##    1 |     24.56 |         H | [21.52, 28.02]
 ##    2 |     18.78 |         H | [16.15, 21.83]</code></pre>
-<div class="sourceCode" id="cb706"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb797"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">gpred</span></code></pre></div>
 <div class="inline-figure"><img src="13-GLMPoisson_files/figure-html/pois030-1.png" width="95%" style="display: block; margin: auto;"></div>
 <p>El cociente entre los valores predichos de la tabla nos permite realizar una evaluación del riesgo de dos combinaciones de los factores. El gráfico nos permite realizar una comparación aproximada del riesgo, y una evaluación de la combinación que produce un mayor número de roturas (<code>wool = A</code> y <code>tension = L</code>), y la que menos (<code>wool = B</code> y <code>tension = H</code>).</p>
 </div>
-<div id="datos-de-barcos-2" class="section level4" number="13.6.1.2">
+<div id="datos-de-barcos-2" class="section level4" number="14.6.1.2">
 <h4>
-<span class="header-section-number">13.6.1.2</span> Datos de barcos<a class="anchor" aria-label="anchor" href="#datos-de-barcos-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.6.1.2</span> Datos de barcos<a class="anchor" aria-label="anchor" href="#datos-de-barcos-2"><i class="fas fa-link"></i></a>
 </h4>
 <p>En este caso la predicción hace referencia a las tasas de incidencia del número de incidentes y no sobre el número de incidentes.</p>
-<div class="sourceCode" id="cb707"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb798"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Obtenemos el objeto de predicción</span>
 <span class="va">gpred</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://strengejacke.github.io/sjPlot/reference/plot_model.html">plot_model</a></span><span class="op">(</span><span class="va">fit.barcos.num</span>,<span class="st">"pred"</span>,
                     terms<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"year"</span>,<span class="st">"period"</span>,<span class="st">"type"</span><span class="op">)</span>,
@@ -1620,7 +1621,7 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 ## 
 ## Adjusted for:
 ## * service = 7.05</code></pre>
-<div class="sourceCode" id="cb709"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb800"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">gpred</span></code></pre></div>
 <div class="inline-figure"><img src="13-GLMPoisson_files/figure-html/pois031-1.png" width="95%" style="display: block; margin: auto;"></div>
 <p>El gráfico de predicción nos permite apreciar los cambios en la tasa de incidencia para la combinación de las predictoras consideradas (incluso con el suavizado introducido). Los tipos de barco tienen perfiles similares al comparar por periodo, pero su evolución es diferente en cuanto al año de fabricación. En casi todos los tipos de barco hay una evolución ligeramente creciente, salvo en el tipo <code>D</code> donde hay un descenso en los últimos años, y en el tipo <code>E</code> que hay un descenso.</p>
@@ -1628,23 +1629,23 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 </div>
 </div>
 </div>
-<div id="ejercicios-4" class="section level2" number="13.7">
+<div id="ejercicios-4" class="section level2" number="14.7">
 <h2>
-<span class="header-section-number">13.7</span> Ejercicios<a class="anchor" aria-label="anchor" href="#ejercicios-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.7</span> Ejercicios<a class="anchor" aria-label="anchor" href="#ejercicios-4"><i class="fas fa-link"></i></a>
 </h2>
 <p><strong>Ejercicio 1.</strong> En el banco de datos siguiente aparecen los datos correspondientes a un pequeño experimento (<code>grupo</code>) en el que 7 de un total de 16 ratones fueron aleatoriamente seleccionados para recibir un nuevo tratamiento médico. Los 9 ratones restantes fueron asignados a un grupo control en el que no se administró ningún tipo de tratamiento. El objetivo del tratamiento era prolongar el tiempo de supervivencia (<code>tiempo</code>) después de una operación quirúrgica. La tabla muestra los tiempos de supervivencia (en días) tras la operación para los 16 ratones. El tratamiento, ¿prolongaba la vida de los ratones tras la operación?</p>
-<div class="sourceCode" id="cb710"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb801"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">grupo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"T"</span>,<span class="fl">7</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"C"</span>,<span class="fl">9</span><span class="op">)</span><span class="op">)</span> 
 <span class="va">tiempo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">94</span>,<span class="fl">38</span>,<span class="fl">23</span>,<span class="fl">197</span>,<span class="fl">99</span>,<span class="fl">16</span>,<span class="fl">141</span>,<span class="fl">52</span>,<span class="fl">104</span>,<span class="fl">146</span>,<span class="fl">10</span>,<span class="fl">51</span>,<span class="fl">30</span>,<span class="fl">40</span>,<span class="fl">27</span>,<span class="fl">46</span><span class="op">)</span> 
 <span class="va">ejercicio01</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">grupo</span>,<span class="va">tiempo</span><span class="op">)</span> </code></pre></div>
 <p><strong>Ejercicio 2.</strong> Los datos siguientes contienen el tiempo de supervivencia, que es el tiempo (<code>tiempo</code>) hasta la muerte (en semanas) desde el diagnóstico de leucemia, y el número inicial de células blancas en sangre (<code>lcelulas</code> en escala log10), para un grupo de 17 sujetos que fueron diagnosticados de leucemia. ¿Cuáles son tus conclusiones sobre la utilidad de saber el número de células blancas en la sangre para predecir el tiempo de supervivencia? ¿Cuál es la probabilidad de sobrevivir de un paciente con 5000 células blancas en la sangre?</p>
-<div class="sourceCode" id="cb711"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb802"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">lcelulas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3.36</span>,<span class="fl">2.88</span>,<span class="fl">3.63</span>,<span class="fl">3.41</span>,<span class="fl">3.78</span>,<span class="fl">4.02</span>,<span class="fl">4.00</span>,<span class="fl">4.72</span>,<span class="fl">5.00</span>,<span class="fl">4.23</span>,
               <span class="fl">3.73</span>,<span class="fl">3.85</span>,<span class="fl">3.97</span>,<span class="fl">4.51</span>, <span class="fl">4.54</span>,<span class="fl">5.00</span>,<span class="fl">5.00</span><span class="op">)</span> 
 <span class="va">tiempo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">65</span>,<span class="fl">156</span>,<span class="fl">100</span>,<span class="fl">134</span>,<span class="fl">16</span>,<span class="fl">108</span>,<span class="fl">121</span>,<span class="fl">5</span>,<span class="fl">65</span>,<span class="fl">4</span>,<span class="fl">39</span>,<span class="fl">143</span>,<span class="fl">56</span>,<span class="fl">26</span>,<span class="fl">22</span>,<span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span> 
 <span class="va">ejercicio02</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">lcelulas</span>,<span class="va">tiempo</span><span class="op">)</span> </code></pre></div>
 <p><strong>Ejercicio 3.</strong> Los datos de este ejercicio provienen de un famoso estudio realizado por Sir Richard Doll y colegas. En 1951, a todos los médicos británicos se les envió un breve cuestionario sobre si fumaban o no. Desde entonces, la información sobre la causa de la muerte ha sido recogida desde entonces. El conjunto de datos muestra el número de muertes por enfermedad coronaria (<code>deaths</code>), si eran o no fumadores (<code>smoking</code>), el grupo de edad al fallecimiento (<code>age</code>), y el número total de personas-años de observación en el momento del análisis (<code>person-years</code>). Para aprovechar el carácter ordinal de la variable <code>age</code> se sugiere utilizar una codificación numérica que identifique con un 1 al grupo de menor edad y con un 5 al grupo de mayor edad (otra opción sería utilizar el punto medio del intervalo). Representa la tasa de muertes por 100000 habitantes-año para el grupo de edad identificando si eran o no fumadores y ajusta el modelo que consideres más oportuno atendiendo a ese comportamiento. Los datos aparecen en Breslow and Day (1987).</p>
-<div class="sourceCode" id="cb712"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb803"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="va">dobson</span><span class="op">)</span> </code></pre></div>
 <pre><code>## Loading required package: dobson</code></pre>
 <pre><code>## 
@@ -1658,7 +1659,7 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 <pre><code>## The following object is masked from 'package:MASS':
 ## 
 ##     housing</code></pre>
-<div class="sourceCode" id="cb718"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb809"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">ejercicio03</span> <span class="op">&lt;-</span> <span class="va">doctors</span> 
 <span class="co"># Construimos el vector numérico de edad </span>
 <span class="va">ejercicio03</span><span class="op">$</span><span class="va">age_num</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">5</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">5</span><span class="op">)</span> 
@@ -1675,7 +1676,7 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 <li>Ajusta un modelo adecuado a la información recogida y explica las conclusiones obtenidas.</li>
 </ul>
 <p>Los datos provienen de Baxter, Coutts, and Ross (1980).</p>
-<div class="sourceCode" id="cb719"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb810"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="va">dobson</span><span class="op">)</span> 
 <span class="va">ejercicio04</span> <span class="op">&lt;-</span> <span class="va">insurance</span> 
 <span class="va">ejercicio04</span><span class="op">$</span><span class="va">car_f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">ejercicio04</span><span class="op">$</span><span class="va">car</span><span class="op">)</span> 
@@ -1688,7 +1689,7 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 <li>si el médico recibió o no entrenamiento como residente en el servicio de urgencias</li>
 </ul>
 <p>Representa la tasa de quejas para cada posible variable predictora y obtén el modelo correspondiente a estos datos que te permita responde sobre la influencia de cada una de las características recogidas en el número de quejas recibidas.</p>
-<div class="sourceCode" id="cb720"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb811"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">consultas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2014</span>, <span class="fl">3091</span>, <span class="fl">879</span>, <span class="fl">1780</span>, <span class="fl">3646</span>, <span class="fl">2690</span>, <span class="fl">1864</span>, <span class="fl">2782</span>, 
                <span class="fl">3071</span>, <span class="fl">1502</span>, <span class="fl">2438</span>, <span class="fl">2278</span>, <span class="fl">2458</span>, <span class="fl">2269</span>, <span class="fl">2431</span>, <span class="fl">3010</span>, 
                <span class="fl">2234</span>, <span class="fl">2906</span>, <span class="fl">2043</span>, <span class="fl">3022</span>, <span class="fl">2123</span>, <span class="fl">1029</span>, <span class="fl">3003</span>, <span class="fl">2178</span>, 
@@ -1723,7 +1724,7 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
            <span class="fl">1668.25</span>, <span class="fl">1652.75</span>, <span class="fl">1029.75</span>, <span class="fl">1127</span>, <span class="fl">1547.25</span>, <span class="fl">1499.25</span>, <span class="fl">1747.5</span><span class="op">)</span> 
 <span class="va">ejercicio05</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">consultas</span>,<span class="va">quejas</span>,<span class="va">residente</span>,<span class="va">sexo</span>,<span class="va">ingresos</span>,<span class="va">horas</span><span class="op">)</span></code></pre></div>
 <p><strong>Ejercicio 6.</strong> Disponemos de los pesos (<code>g</code>) de dos pikas afganas preñadas, a lo largo de 14 periodos de tiempo igualmente espaciados entre sí desde la concepción al parto. Ajusta una curva de crecimiento para describir estos datos ¿Puedes detectar alguna diferencia entre los dos animales?</p>
-<div class="sourceCode" id="cb721"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb812"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">animal</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"Pika1"</span>,<span class="fl">14</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"Pika2"</span>,<span class="fl">14</span><span class="op">)</span><span class="op">)</span> 
 <span class="va">peso</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">251</span>, <span class="fl">254</span>, <span class="fl">267</span>, <span class="fl">267</span>, <span class="fl">274</span>, <span class="fl">286</span>, <span class="fl">298</span>, <span class="fl">295</span>, <span class="fl">307</span>, <span class="fl">318</span>, <span class="fl">341</span>,
          <span class="fl">342</span>, <span class="fl">367</span>, <span class="fl">370</span>, <span class="fl">258</span>, <span class="fl">263</span>, <span class="fl">269</span>, <span class="fl">266</span>, <span class="fl">282</span>, <span class="fl">289</span>, <span class="fl">295</span>, <span class="fl">308</span>, 
@@ -1731,7 +1732,7 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 <span class="va">semana</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">14</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">14</span><span class="op">)</span> 
 <span class="va">ejercicio06</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">animal</span>,<span class="va">peso</span>,<span class="va">semana</span><span class="op">)</span> </code></pre></div>
 <p><strong>Ejercicio 7.</strong> Este problema se refiere a datos de un estudio de cangrejos herradura anidados. Cada cangrejo de herradura hembra en el estudio tenía un cangrejo macho unido a ella en su nido. El estudio investigó los factores que afectan si el cangrejo hembra tenía otros machos, llamados satélites, que residían cerca de ella. La característica que se cree que afecta el ancho del caparazón de la hembra. Se recogió información sobre las hembras y los machos, y estas se agruparon en grupos según su anchura. Cada grupo se caracterizo con la anchura media. Además, se registro el número de hembras correspondientes a cada anchura y el número de satélites alrededor de ellas. Representa la tasa media de satélites por hembra en función de la anchura y construye un modelo que represente la información contenida en estos datos. Extrae todas las conclusiones derivadas de el.</p>
-<div class="sourceCode" id="cb722"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb813"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">anchura</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">22.69</span>, <span class="fl">23.84</span>, <span class="fl">24.77</span>, <span class="fl">25.84</span>, <span class="fl">26.79</span>, <span class="fl">27.74</span>, 
              <span class="fl">28.67</span>, <span class="fl">30.41</span><span class="op">)</span> 
 <span class="va">hembras</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">14</span>, <span class="fl">14</span>, <span class="fl">28</span>, <span class="fl">39</span>, <span class="fl">22</span>, <span class="fl">24</span>, <span class="fl">18</span>, <span class="fl">14</span><span class="op">)</span> 
@@ -1741,32 +1742,32 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="glmbinomial.html"><span class="header-section-number">12</span> GLM respuesta binomial</a></div>
-<div class="next"><a href="glmtablascont.html"><span class="header-section-number">14</span> GLM para tablas de contingencia</a></div>
+<div class="prev"><a href="glmbinomial.html"><span class="header-section-number">13</span> GLM respuesta binomial</a></div>
+<div class="next"><a href="glmtablascont.html"><span class="header-section-number">15</span> GLM para tablas de contingencia</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#glmpoisson"><span class="header-section-number">13</span> GLM Poisson</a></li>
+<li><a class="nav-link" href="#glmpoisson"><span class="header-section-number">14</span> GLM Poisson</a></li>
 <li>
-<a class="nav-link" href="#bancos-de-datos-4"><span class="header-section-number">13.1</span> Bancos de datos</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#telas"><span class="header-section-number">13.1.1</span> Telas</a></li>
-<li><a class="nav-link" href="#barcos"><span class="header-section-number">13.1.2</span> Barcos</a></li>
+<a class="nav-link" href="#bancos-de-datos-4"><span class="header-section-number">14.1</span> Bancos de datos</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#telas"><span class="header-section-number">14.1.1</span> Telas</a></li>
+<li><a class="nav-link" href="#barcos"><span class="header-section-number">14.1.2</span> Barcos</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#modelo-te%C3%B3rico-1"><span class="header-section-number">13.2</span> Modelo Teórico</a></li>
+<li><a class="nav-link" href="#modelo-te%C3%B3rico-1"><span class="header-section-number">14.2</span> Modelo Teórico</a></li>
 <li>
-<a class="nav-link" href="#estimaci%C3%B3n-y-bondad-de-ajuste-del-modelo-1"><span class="header-section-number">13.3</span> Estimación y bondad de ajuste del modelo</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#ejemplos-17"><span class="header-section-number">13.3.1</span> Ejemplos</a></li></ul>
+<a class="nav-link" href="#estimaci%C3%B3n-y-bondad-de-ajuste-del-modelo-1"><span class="header-section-number">14.3</span> Estimación y bondad de ajuste del modelo</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#ejemplos-18"><span class="header-section-number">14.3.1</span> Ejemplos</a></li></ul>
 </li>
 <li>
-<a class="nav-link" href="#selecci%C3%B3n-del-modelo-1"><span class="header-section-number">13.4</span> Selección del modelo</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#ejemplos-18"><span class="header-section-number">13.4.1</span> Ejemplos</a></li></ul>
+<a class="nav-link" href="#selecci%C3%B3n-del-modelo-1"><span class="header-section-number">14.4</span> Selección del modelo</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#ejemplos-19"><span class="header-section-number">14.4.1</span> Ejemplos</a></li></ul>
 </li>
 <li>
-<a class="nav-link" href="#diagn%C3%B3stico-4"><span class="header-section-number">13.5</span> Diagnóstico</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#ejemplos-19"><span class="header-section-number">13.5.1</span> Ejemplos</a></li></ul>
+<a class="nav-link" href="#diagn%C3%B3stico-5"><span class="header-section-number">14.5</span> Diagnóstico</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#ejemplos-20"><span class="header-section-number">14.5.1</span> Ejemplos</a></li></ul>
 </li>
 <li>
-<a class="nav-link" href="#predicci%C3%B3n-5"><span class="header-section-number">13.6</span> Predicción</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#bancos-de-datos-5"><span class="header-section-number">13.6.1</span> Bancos de datos</a></li></ul>
+<a class="nav-link" href="#predicci%C3%B3n-5"><span class="header-section-number">14.6</span> Predicción</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#bancos-de-datos-5"><span class="header-section-number">14.6.1</span> Bancos de datos</a></li></ul>
 </li>
-<li><a class="nav-link" href="#ejercicios-4"><span class="header-section-number">13.7</span> Ejercicios</a></li>
+<li><a class="nav-link" href="#ejercicios-4"><span class="header-section-number">14.7</span> Ejercicios</a></li>
 </ul>
 
       <div class="book-extra">
@@ -1783,7 +1784,7 @@ RR\left(\frac{type C}{type E}\right) = \frac{exp(- 14.21 + 0.09*year + 0.02*peri
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Modelos Estadísticos</strong>" was written by true, true. It was last built on 2022-03-03.</p>
+    <p>"<strong>Modelos Estadísticos</strong>" was written by true, true. It was last built on 2022-03-25.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
